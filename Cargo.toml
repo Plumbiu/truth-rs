@@ -1,0 +1,19 @@
+[package]
+name = "truth-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.4.10", features = ["derive"] }
+truth-rs-core = { path = "crates/truth-rs-core" }
+truth-rs-type = { path = "crates/truth-rs-type" }
+truth-rs-server = { path = "crates/truth-rs-server" }
+truth-rs-constants = { path = "crates/truth-cli-constants" }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = 'abort'
+strip = true
+lto = true

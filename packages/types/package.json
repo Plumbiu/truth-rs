@@ -1,0 +1,14 @@
+{
+  "name": "@truth-rs/types",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "devDependencies": {
+    "typescript": "^5.3.2"
+  },
+  "lint-staged": {
+    "!(*d).{js,ts}": [
+      "eslint"
+    ]
+  }
+}
