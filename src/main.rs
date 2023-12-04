@@ -1,7 +1,9 @@
 use clap::{Parser, Subcommand};
 use std::{path::Path, time::Instant};
 use truth_rs_constants::log_url;
-use truth_rs_core::{gen_relations, graph::write_graph, json::write_json, write_relation};
+use truth_rs_core::{
+    gen_relations, graph::write_graph, json::write_json, tree::write_tree, write_relation,
+};
 use truth_rs_server::start_server;
 
 #[derive(Debug, Parser)] // requires `derive` feature
@@ -57,7 +59,7 @@ fn main() {
         Commands::Json { depth } => {
             let start = Instant::now();
             let write_path = "pkgs.json";
-            write_json(depth, write_path);
+            write_json(depth, &Path::new(write_path).to_path_buf());
             log_url(write_path, start.elapsed());
         }
         Commands::Html { depth } => {
@@ -70,6 +72,7 @@ fn main() {
             let write_path = Path::new("packages").join("web").join("public");
             write_graph(&write_path);
             write_relation(&write_path);
+            write_tree(4, &write_path);
         }
     }
 }

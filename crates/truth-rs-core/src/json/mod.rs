@@ -1,14 +1,14 @@
-use std::{fs, vec};
+use std::{fs, path::PathBuf, vec};
 use truth_rs_type::{json::Pkgs, AHashMap, RelationsMap};
 
 use crate::gen_relations;
 
 fn map2vec(v: &mut Vec<Pkgs>, m: &Option<AHashMap>) {
     if let Some(map) = m {
-        for (name, rel) in map.iter() {
+        for (name, version) in map.iter() {
             v.push(Pkgs {
                 name: Some(name.to_owned()),
-                version: rel.to_owned(),
+                version: version.to_owned(),
                 packages: Some(vec![]),
             })
         }
@@ -16,7 +16,7 @@ fn map2vec(v: &mut Vec<Pkgs>, m: &Option<AHashMap>) {
 }
 
 fn do_gen_json(root: &mut Vec<Pkgs>, max_dep: u16, relation_map: &RelationsMap) {
-    if max_dep <= 0 || root.len() == 0 {
+    if max_dep <= 0 {
         return;
     }
     for item in root {
@@ -52,7 +52,7 @@ pub fn gen_json(depth: u16, relation_map: &RelationsMap) -> Pkgs {
     root_pkg
 }
 
-pub fn write_json(depth: u16, write_path: &str) {
+pub fn write_json(depth: u16, write_path: &PathBuf) {
     let _ = fs::write(
         write_path,
         serde_json::to_string(&gen_json(depth, &gen_relations())).unwrap(),

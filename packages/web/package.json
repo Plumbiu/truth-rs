@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@antv/g6": "^5",
+    "@antv/g6": "^4.8.23",
     "vue": "^3.3.8"
   },
   "devDependencies": {

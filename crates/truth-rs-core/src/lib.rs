@@ -1,5 +1,6 @@
 pub mod graph;
 pub mod json;
+pub mod tree;
 mod lock_file;
 mod util;
 

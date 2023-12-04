@@ -15,3 +15,4 @@ pub fn merge_map(m1: &Option<AHashMap>, m2: &Option<AHashMap>) -> Option<AHashMa
     }
     Some(pkgs)
 }
+
