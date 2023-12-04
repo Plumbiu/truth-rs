@@ -14,14 +14,14 @@ pub fn gen_graph(relations: &RelationsMap) -> Graph {
     };
     let mut nodes_set: HashSet<String, RandomState> = HashSet::default();
     for (source, rel) in relations {
-        nodes_set.insert(source.to_string());
+        nodes_set.insert(source.to_owned());
         if let Some(deps) = &rel.packages {
             for target in deps.keys() {
-                nodes_set.insert(target.to_string());
+                nodes_set.insert(target.to_owned());
                 graph.links.push(GraphLink {
-                    source: source.to_string(),
-                    target: target.to_string(),
-                    value: source.to_string(),
+                    source: source.to_owned(),
+                    target: target.to_owned(),
+                    value: source.to_owned(),
                 })
             }
         }

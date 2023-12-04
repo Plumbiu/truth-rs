@@ -22,7 +22,7 @@ pub fn gen_relations() -> RelationsMap {
         devDependencies,
     } = serde_json::from_str(&base).unwrap();
     relations.insert(
-        "__root__".to_string(),
+        "__root__".to_owned(),
         Relation {
             name,
             version,

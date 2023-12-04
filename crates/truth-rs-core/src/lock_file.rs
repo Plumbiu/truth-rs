@@ -9,7 +9,7 @@ pub fn update_by_yarn(relations: &mut RelationsMap) {
     for lock_item in lock_file {
         let mut deps: AHashMap = HashMap::default();
         for (name, version) in lock_item.dependencies {
-            deps.insert(name.to_string(), version.to_string());
+            deps.insert(name.to_owned(), version.to_owned());
         }
         let rel = Relation {
             name: Some(lock_item.name.to_owned()),
@@ -17,7 +17,7 @@ pub fn update_by_yarn(relations: &mut RelationsMap) {
             packages: Some(deps),
         };
 
-        relations.insert(lock_item.name.to_string(), rel);
+        relations.insert(lock_item.name.to_owned(), rel);
     }
 }
 
@@ -48,7 +48,7 @@ pub fn update_by_npm(relations: &mut RelationsMap) {
     const NODE_MODULES_LEN: usize = NODE_MODULES.len();
     for (mut name, rel) in lock_file.packages {
         while let Some(idx) = name.find(NODE_MODULES) {
-            name = name[idx + NODE_MODULES_LEN..].to_string();
+            name = name[idx + NODE_MODULES_LEN..].to_owned();
         }
         relations.insert(
             name.clone(),
