@@ -8,7 +8,7 @@ clap = { version = "4.4.10", features = ["derive"] }
 truth-rs-core = { path = "crates/truth-rs-core" }
 truth-rs-type = { path = "crates/truth-rs-type" }
 truth-rs-server = { path = "crates/truth-rs-server" }
-truth-rs-constants = { path = "crates/truth-cli-constants" }
+truth-rs-constants = { path = "crates/truth-rs-constants" }
 
 [profile.dev]
 panic = "abort"
