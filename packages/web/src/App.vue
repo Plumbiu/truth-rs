@@ -23,7 +23,7 @@ onMounted(async () => {
         type: 'tooltip', // 提示框
         formatText(model) {
           // 提示框文本内容
-          const text = 'label: ' + model.label + '<br/> class: ' + model.class;
+          const text = '<b>label:</b> ' + model.label + '<br/> <b>class:</b> ' + model.class;
           return text;
         },
       }]
