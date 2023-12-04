@@ -1,1 +1,828 @@
-{"id":"__root__","label":"1.0.0","children":[{"id":"eslint","label":"^8.55.0","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"globals","label":"13.23.0","children":[{"id":"type-fest","label":"0.20.2","children":[]}]},{"id":"espree","label":"9.6.1","children":[{"id":"acorn-jsx","label":"5.3.2(acorn@8.11.2)","children":[{"id":"acorn","label":"8.11.2","children":[]}]},{"id":"acorn","label":"8.11.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]}]},{"id":"json-stable-stringify-without-jsonify","label":"1.0.1","children":[]},{"id":"file-entry-cache","label":"6.0.1","children":[{"id":"flat-cache","label":"3.2.0","children":[{"id":"rimraf","label":"3.0.2","children":[{"id":"glob","label":"7.2.3","children":[]}]},{"id":"flatted","label":"3.2.9","children":[]},{"id":"keyv","label":"4.5.4","children":[{"id":"json-buffer","label":"3.0.1","children":[]}]}]}]},{"id":"is-glob","label":"4.0.3","children":[{"id":"is-extglob","label":"2.1.1","children":[]}]},{"id":"doctrine","label":"3.0.0","children":[{"id":"esutils","label":"2.0.3","children":[]}]},{"id":"@nodelib/fs.walk","label":"1.2.8","children":[{"id":"fastq","label":"1.15.0","children":[{"id":"reusify","label":"1.0.4","children":[]}]},{"id":"@nodelib/fs.scandir","label":"2.1.5","children":[{"id":"@nodelib/fs.stat","label":"2.0.5","children":[]},{"id":"run-parallel","label":"1.2.0","children":[{"id":"queue-microtask","label":"1.2.3","children":[]}]}]}]},{"id":"ajv","label":"6.12.6","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"json-schema-traverse","label":"0.4.1","children":[]},{"id":"fast-json-stable-stringify","label":"2.1.0","children":[]},{"id":"uri-js","label":"4.4.1","children":[{"id":"punycode","label":"2.3.1","children":[]}]}]},{"id":"glob-parent","label":"6.0.2","children":[{"id":"is-glob","label":"4.0.3","children":[{"id":"is-extglob","label":"2.1.1","children":[]}]}]},{"id":"@eslint/eslintrc","label":"2.1.4","children":[{"id":"strip-json-comments","label":"3.1.1","children":[]},{"id":"debug","label":"4.3.4","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"espree","label":"9.6.1","children":[{"id":"acorn-jsx","label":"5.3.2(acorn@8.11.2)","children":[{"id":"acorn","label":"8.11.2","children":[]}]},{"id":"acorn","label":"8.11.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]}]},{"id":"ajv","label":"6.12.6","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"json-schema-traverse","label":"0.4.1","children":[]},{"id":"fast-json-stable-stringify","label":"2.1.0","children":[]},{"id":"uri-js","label":"4.4.1","children":[{"id":"punycode","label":"2.3.1","children":[]}]}]},{"id":"import-fresh","label":"3.3.0","children":[{"id":"resolve-from","label":"4.0.0","children":[]},{"id":"parent-module","label":"1.0.1","children":[{"id":"callsites","label":"3.1.0","children":[]}]}]},{"id":"globals","label":"13.23.0","children":[{"id":"type-fest","label":"0.20.2","children":[]}]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"minimatch","label":"3.1.2","children":[{"id":"brace-expansion","label":"1.1.11","children":[{"id":"balanced-match","label":"1.0.2","children":[]},{"id":"concat-map","label":"0.0.1","children":[]}]}]},{"id":"js-yaml","label":"4.1.0","children":[{"id":"argparse","label":"2.0.1","children":[]}]}]},{"id":"minimatch","label":"3.1.2","children":[{"id":"brace-expansion","label":"1.1.11","children":[{"id":"balanced-match","label":"1.0.2","children":[]},{"id":"concat-map","label":"0.0.1","children":[]}]}]},{"id":"js-yaml","label":"4.1.0","children":[{"id":"argparse","label":"2.0.1","children":[]}]},{"id":"optionator","label":"0.9.3","children":[{"id":"deep-is","label":"0.1.4","children":[]},{"id":"@aashutoshrathi/word-wrap","label":"1.2.6","children":[]},{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"levn","label":"0.4.1","children":[{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"type-check","label":"0.4.0","children":[{"id":"prelude-ls","label":"1.2.1","children":[]}]}]},{"id":"type-check","label":"0.4.0","children":[{"id":"prelude-ls","label":"1.2.1","children":[]}]},{"id":"fast-levenshtein","label":"2.0.6","children":[]}]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"eslint","label":"8.55.0","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"globals","label":"13.23.0","children":[{"id":"type-fest","label":"0.20.2","children":[]}]},{"id":"espree","label":"9.6.1","children":[{"id":"acorn-jsx","label":"5.3.2(acorn@8.11.2)","children":[]},{"id":"acorn","label":"8.11.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]}]},{"id":"json-stable-stringify-without-jsonify","label":"1.0.1","children":[]},{"id":"file-entry-cache","label":"6.0.1","children":[{"id":"flat-cache","label":"3.2.0","children":[]}]},{"id":"is-glob","label":"4.0.3","children":[{"id":"is-extglob","label":"2.1.1","children":[]}]},{"id":"doctrine","label":"3.0.0","children":[{"id":"esutils","label":"2.0.3","children":[]}]},{"id":"@nodelib/fs.walk","label":"1.2.8","children":[{"id":"fastq","label":"1.15.0","children":[]},{"id":"@nodelib/fs.scandir","label":"2.1.5","children":[]}]},{"id":"ajv","label":"6.12.6","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"json-schema-traverse","label":"0.4.1","children":[]},{"id":"fast-json-stable-stringify","label":"2.1.0","children":[]},{"id":"uri-js","label":"4.4.1","children":[]}]},{"id":"glob-parent","label":"6.0.2","children":[{"id":"is-glob","label":"4.0.3","children":[]}]},{"id":"@eslint/eslintrc","label":"2.1.4","children":[{"id":"strip-json-comments","label":"3.1.1","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"espree","label":"9.6.1","children":[]},{"id":"ajv","label":"6.12.6","children":[]},{"id":"import-fresh","label":"3.3.0","children":[]},{"id":"globals","label":"13.23.0","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"minimatch","label":"3.1.2","children":[]},{"id":"js-yaml","label":"4.1.0","children":[]}]},{"id":"minimatch","label":"3.1.2","children":[{"id":"brace-expansion","label":"1.1.11","children":[]}]},{"id":"js-yaml","label":"4.1.0","children":[{"id":"argparse","label":"2.0.1","children":[]}]},{"id":"optionator","label":"0.9.3","children":[{"id":"deep-is","label":"0.1.4","children":[]},{"id":"@aashutoshrathi/word-wrap","label":"1.2.6","children":[]},{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"levn","label":"0.4.1","children":[]},{"id":"type-check","label":"0.4.0","children":[]},{"id":"fast-levenshtein","label":"2.0.6","children":[]}]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"eslint","label":"8.55.0","children":[]}]},{"id":"lodash.merge","label":"4.6.2","children":[]},{"id":"text-table","label":"0.2.0","children":[]},{"id":"debug","label":"4.3.4","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"esquery","label":"1.5.0","children":[{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"@humanwhocodes/config-array","label":"0.11.13","children":[{"id":"@humanwhocodes/object-schema","label":"2.0.1","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"minimatch","label":"3.1.2","children":[]}]},{"id":"eslint-scope","label":"7.2.2","children":[{"id":"esrecurse","label":"4.3.0","children":[]},{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"chalk","label":"4.1.2","children":[{"id":"ansi-styles","label":"4.3.0","children":[]},{"id":"supports-color","label":"7.2.0","children":[]}]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"esutils","label":"2.0.3","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"imurmurhash","label":"0.1.4","children":[]},{"id":"natural-compare","label":"1.4.0","children":[]},{"id":"strip-ansi","label":"6.0.1","children":[{"id":"ansi-regex","label":"5.0.1","children":[]}]},{"id":"@humanwhocodes/module-importer","label":"1.0.1","children":[]},{"id":"find-up","label":"5.0.0","children":[{"id":"path-exists","label":"4.0.0","children":[]},{"id":"locate-path","label":"6.0.0","children":[]}]},{"id":"@ungap/structured-clone","label":"1.2.0","children":[]},{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"cross-spawn","label":"7.0.3","children":[{"id":"path-key","label":"3.1.1","children":[]},{"id":"shebang-command","label":"2.0.0","children":[]},{"id":"which","label":"2.0.2","children":[]}]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"is-path-inside","label":"3.0.3","children":[]},{"id":"levn","label":"0.4.1","children":[{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"type-check","label":"0.4.0","children":[]}]},{"id":"@eslint-community/regexpp","label":"4.10.0","children":[]},{"id":"@eslint/js","label":"8.55.0","children":[]}]}]},{"id":"lodash.merge","label":"4.6.2","children":[]},{"id":"text-table","label":"0.2.0","children":[]},{"id":"debug","label":"4.3.4","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"esquery","label":"1.5.0","children":[{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"@humanwhocodes/config-array","label":"0.11.13","children":[{"id":"@humanwhocodes/object-schema","label":"2.0.1","children":[]},{"id":"debug","label":"4.3.4","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"minimatch","label":"3.1.2","children":[{"id":"brace-expansion","label":"1.1.11","children":[{"id":"balanced-match","label":"1.0.2","children":[]},{"id":"concat-map","label":"0.0.1","children":[]}]}]}]},{"id":"eslint-scope","label":"7.2.2","children":[{"id":"esrecurse","label":"4.3.0","children":[{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"chalk","label":"4.1.2","children":[{"id":"ansi-styles","label":"4.3.0","children":[{"id":"color-convert","label":"2.0.1","children":[{"id":"color-name","label":"1.1.4","children":[]}]}]},{"id":"supports-color","label":"7.2.0","children":[{"id":"has-flag","label":"4.0.0","children":[]}]}]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"esutils","label":"2.0.3","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"imurmurhash","label":"0.1.4","children":[]},{"id":"natural-compare","label":"1.4.0","children":[]},{"id":"strip-ansi","label":"6.0.1","children":[{"id":"ansi-regex","label":"5.0.1","children":[]}]},{"id":"@humanwhocodes/module-importer","label":"1.0.1","children":[]},{"id":"find-up","label":"5.0.0","children":[{"id":"path-exists","label":"4.0.0","children":[]},{"id":"locate-path","label":"6.0.0","children":[{"id":"p-locate","label":"5.0.0","children":[{"id":"p-limit","label":"3.1.0","children":[]}]}]}]},{"id":"@ungap/structured-clone","label":"1.2.0","children":[]},{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"cross-spawn","label":"7.0.3","children":[{"id":"path-key","label":"3.1.1","children":[]},{"id":"shebang-command","label":"2.0.0","children":[{"id":"shebang-regex","label":"3.0.0","children":[]}]},{"id":"which","label":"2.0.2","children":[{"id":"isexe","label":"2.0.0","children":[]}]}]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"is-path-inside","label":"3.0.3","children":[]},{"id":"levn","label":"0.4.1","children":[{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"type-check","label":"0.4.0","children":[{"id":"prelude-ls","label":"1.2.1","children":[]}]}]},{"id":"@eslint-community/regexpp","label":"4.10.0","children":[]},{"id":"@eslint/js","label":"8.55.0","children":[]}]},{"id":"@plumbiu/eslint-config","label":"^0.1.10","children":[{"id":"eslint-plugin-i","label":"2.29.0(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.55.0)","children":[{"id":"is-glob","label":"4.0.3","children":[{"id":"is-extglob","label":"2.1.1","children":[]}]},{"id":"semver","label":"7.5.4","children":[]},{"id":"get-tsconfig","label":"4.7.2","children":[{"id":"resolve-pkg-maps","label":"1.0.0","children":[]}]},{"id":"minimatch","label":"3.1.2","children":[{"id":"brace-expansion","label":"1.1.11","children":[{"id":"balanced-match","label":"1.0.2","children":[]},{"id":"concat-map","label":"0.0.1","children":[]}]}]},{"id":"eslint-module-utils","label":"2.8.0(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.55.0)","children":[{"id":"eslint","label":"8.55.0","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"globals","label":"13.23.0","children":[]},{"id":"espree","label":"9.6.1","children":[]},{"id":"json-stable-stringify-without-jsonify","label":"1.0.1","children":[]},{"id":"file-entry-cache","label":"6.0.1","children":[]},{"id":"is-glob","label":"4.0.3","children":[]},{"id":"doctrine","label":"3.0.0","children":[]},{"id":"@nodelib/fs.walk","label":"1.2.8","children":[]},{"id":"ajv","label":"6.12.6","children":[]},{"id":"glob-parent","label":"6.0.2","children":[]},{"id":"@eslint/eslintrc","label":"2.1.4","children":[]},{"id":"minimatch","label":"3.1.2","children":[]},{"id":"js-yaml","label":"4.1.0","children":[]},{"id":"optionator","label":"0.9.3","children":[]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[]},{"id":"lodash.merge","label":"4.6.2","children":[]},{"id":"text-table","label":"0.2.0","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"esquery","label":"1.5.0","children":[]},{"id":"@humanwhocodes/config-array","label":"0.11.13","children":[]},{"id":"eslint-scope","label":"7.2.2","children":[]},{"id":"chalk","label":"4.1.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"esutils","label":"2.0.3","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"imurmurhash","label":"0.1.4","children":[]},{"id":"natural-compare","label":"1.4.0","children":[]},{"id":"strip-ansi","label":"6.0.1","children":[]},{"id":"@humanwhocodes/module-importer","label":"1.0.1","children":[]},{"id":"find-up","label":"5.0.0","children":[]},{"id":"@ungap/structured-clone","label":"1.2.0","children":[]},{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"cross-spawn","label":"7.0.3","children":[]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"is-path-inside","label":"3.0.3","children":[]},{"id":"levn","label":"0.4.1","children":[]},{"id":"@eslint-community/regexpp","label":"4.10.0","children":[]},{"id":"@eslint/js","label":"8.55.0","children":[]}]},{"id":"eslint-import-resolver-node","label":"0.3.9","children":[{"id":"is-core-module","label":"2.13.1","children":[]},{"id":"debug","label":"3.2.7","children":[]},{"id":"resolve","label":"1.22.8","children":[]}]},{"id":"debug","label":"3.2.7","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"eslint-import-resolver-typescript","label":"3.6.1(@typescript-eslint/parser@6.13.1)(eslint-plugin-import@2.29.0)(eslint@8.55.0)","children":[{"id":"debug","label":"4.3.4","children":[]},{"id":"eslint-module-utils","label":"2.8.0(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.55.0)","children":[]},{"id":"eslint-plugin-import","label":"2.29.0(eslint@8.55.0)","children":[]},{"id":"is-core-module","label":"2.13.1","children":[]},{"id":"is-glob","label":"4.0.3","children":[]},{"id":"fast-glob","label":"3.3.2","children":[]},{"id":"enhanced-resolve","label":"5.15.0","children":[]},{"id":"eslint","label":"8.55.0","children":[]},{"id":"get-tsconfig","label":"4.7.2","children":[]}]},{"id":"@typescript-eslint/parser","label":"6.13.1(eslint@8.55.0)(typescript@5.3.2)","children":[{"id":"debug","label":"4.3.4","children":[]},{"id":"eslint","label":"8.55.0","children":[]},{"id":"@typescript-eslint/typescript-estree","label":"6.13.1(typescript@5.3.2)","children":[]},{"id":"@typescript-eslint/visitor-keys","label":"6.13.1","children":[]},{"id":"@typescript-eslint/scope-manager","label":"6.13.1","children":[]},{"id":"typescript","label":"5.3.2","children":[]},{"id":"@typescript-eslint/types","label":"6.13.1","children":[]}]}]},{"id":"resolve","label":"1.22.8","children":[{"id":"supports-preserve-symlinks-flag","label":"1.0.0","children":[]},{"id":"is-core-module","label":"2.13.1","children":[{"id":"hasown","label":"2.0.0","children":[]}]},{"id":"path-parse","label":"1.0.7","children":[]}]},{"id":"debug","label":"3.2.7","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"doctrine","label":"2.1.0","children":[{"id":"esutils","label":"2.0.3","children":[]}]},{"id":"eslint-import-resolver-node","label":"0.3.9","children":[{"id":"is-core-module","label":"2.13.1","children":[{"id":"hasown","label":"2.0.0","children":[]}]},{"id":"debug","label":"3.2.7","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"resolve","label":"1.22.8","children":[{"id":"supports-preserve-symlinks-flag","label":"1.0.0","children":[]},{"id":"is-core-module","label":"2.13.1","children":[]},{"id":"path-parse","label":"1.0.7","children":[]}]}]},{"id":"eslint","label":"8.55.0","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"globals","label":"13.23.0","children":[{"id":"type-fest","label":"0.20.2","children":[]}]},{"id":"espree","label":"9.6.1","children":[{"id":"acorn-jsx","label":"5.3.2(acorn@8.11.2)","children":[]},{"id":"acorn","label":"8.11.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]}]},{"id":"json-stable-stringify-without-jsonify","label":"1.0.1","children":[]},{"id":"file-entry-cache","label":"6.0.1","children":[{"id":"flat-cache","label":"3.2.0","children":[]}]},{"id":"is-glob","label":"4.0.3","children":[{"id":"is-extglob","label":"2.1.1","children":[]}]},{"id":"doctrine","label":"3.0.0","children":[{"id":"esutils","label":"2.0.3","children":[]}]},{"id":"@nodelib/fs.walk","label":"1.2.8","children":[{"id":"fastq","label":"1.15.0","children":[]},{"id":"@nodelib/fs.scandir","label":"2.1.5","children":[]}]},{"id":"ajv","label":"6.12.6","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"json-schema-traverse","label":"0.4.1","children":[]},{"id":"fast-json-stable-stringify","label":"2.1.0","children":[]},{"id":"uri-js","label":"4.4.1","children":[]}]},{"id":"glob-parent","label":"6.0.2","children":[{"id":"is-glob","label":"4.0.3","children":[]}]},{"id":"@eslint/eslintrc","label":"2.1.4","children":[{"id":"strip-json-comments","label":"3.1.1","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"espree","label":"9.6.1","children":[]},{"id":"ajv","label":"6.12.6","children":[]},{"id":"import-fresh","label":"3.3.0","children":[]},{"id":"globals","label":"13.23.0","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"minimatch","label":"3.1.2","children":[]},{"id":"js-yaml","label":"4.1.0","children":[]}]},{"id":"minimatch","label":"3.1.2","children":[{"id":"brace-expansion","label":"1.1.11","children":[]}]},{"id":"js-yaml","label":"4.1.0","children":[{"id":"argparse","label":"2.0.1","children":[]}]},{"id":"optionator","label":"0.9.3","children":[{"id":"deep-is","label":"0.1.4","children":[]},{"id":"@aashutoshrathi/word-wrap","label":"1.2.6","children":[]},{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"levn","label":"0.4.1","children":[]},{"id":"type-check","label":"0.4.0","children":[]},{"id":"fast-levenshtein","label":"2.0.6","children":[]}]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"eslint","label":"8.55.0","children":[]}]},{"id":"lodash.merge","label":"4.6.2","children":[]},{"id":"text-table","label":"0.2.0","children":[]},{"id":"debug","label":"4.3.4","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"esquery","label":"1.5.0","children":[{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"@humanwhocodes/config-array","label":"0.11.13","children":[{"id":"@humanwhocodes/object-schema","label":"2.0.1","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"minimatch","label":"3.1.2","children":[]}]},{"id":"eslint-scope","label":"7.2.2","children":[{"id":"esrecurse","label":"4.3.0","children":[]},{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"chalk","label":"4.1.2","children":[{"id":"ansi-styles","label":"4.3.0","children":[]},{"id":"supports-color","label":"7.2.0","children":[]}]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"esutils","label":"2.0.3","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"imurmurhash","label":"0.1.4","children":[]},{"id":"natural-compare","label":"1.4.0","children":[]},{"id":"strip-ansi","label":"6.0.1","children":[{"id":"ansi-regex","label":"5.0.1","children":[]}]},{"id":"@humanwhocodes/module-importer","label":"1.0.1","children":[]},{"id":"find-up","label":"5.0.0","children":[{"id":"path-exists","label":"4.0.0","children":[]},{"id":"locate-path","label":"6.0.0","children":[]}]},{"id":"@ungap/structured-clone","label":"1.2.0","children":[]},{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"cross-spawn","label":"7.0.3","children":[{"id":"path-key","label":"3.1.1","children":[]},{"id":"shebang-command","label":"2.0.0","children":[]},{"id":"which","label":"2.0.2","children":[]}]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"is-path-inside","label":"3.0.3","children":[]},{"id":"levn","label":"0.4.1","children":[{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"type-check","label":"0.4.0","children":[]}]},{"id":"@eslint-community/regexpp","label":"4.10.0","children":[]},{"id":"@eslint/js","label":"8.55.0","children":[]}]}]},{"id":"@stylistic/eslint-plugin","label":"1.4.1(eslint@8.55.0)(typescript@5.3.2)","children":[{"id":"@stylistic/eslint-plugin-js","label":"1.4.1(eslint@8.55.0)","children":[{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"eslint","label":"8.55.0","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"globals","label":"13.23.0","children":[]},{"id":"espree","label":"9.6.1","children":[]},{"id":"json-stable-stringify-without-jsonify","label":"1.0.1","children":[]},{"id":"file-entry-cache","label":"6.0.1","children":[]},{"id":"is-glob","label":"4.0.3","children":[]},{"id":"doctrine","label":"3.0.0","children":[]},{"id":"@nodelib/fs.walk","label":"1.2.8","children":[]},{"id":"ajv","label":"6.12.6","children":[]},{"id":"glob-parent","label":"6.0.2","children":[]},{"id":"@eslint/eslintrc","label":"2.1.4","children":[]},{"id":"minimatch","label":"3.1.2","children":[]},{"id":"js-yaml","label":"4.1.0","children":[]},{"id":"optionator","label":"0.9.3","children":[]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[]},{"id":"lodash.merge","label":"4.6.2","children":[]},{"id":"text-table","label":"0.2.0","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"esquery","label":"1.5.0","children":[]},{"id":"@humanwhocodes/config-array","label":"0.11.13","children":[]},{"id":"eslint-scope","label":"7.2.2","children":[]},{"id":"chalk","label":"4.1.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"esutils","label":"2.0.3","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"imurmurhash","label":"0.1.4","children":[]},{"id":"natural-compare","label":"1.4.0","children":[]},{"id":"strip-ansi","label":"6.0.1","children":[]},{"id":"@humanwhocodes/module-importer","label":"1.0.1","children":[]},{"id":"find-up","label":"5.0.0","children":[]},{"id":"@ungap/structured-clone","label":"1.2.0","children":[]},{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"cross-spawn","label":"7.0.3","children":[]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"is-path-inside","label":"3.0.3","children":[]},{"id":"levn","label":"0.4.1","children":[]},{"id":"@eslint-community/regexpp","label":"4.10.0","children":[]},{"id":"@eslint/js","label":"8.55.0","children":[]}]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"espree","label":"9.6.1","children":[{"id":"acorn-jsx","label":"5.3.2(acorn@8.11.2)","children":[]},{"id":"acorn","label":"8.11.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]}]},{"id":"acorn","label":"8.11.2","children":[]}]},{"id":"@stylistic/eslint-plugin-jsx","label":"1.4.1(eslint@8.55.0)","children":[{"id":"@stylistic/eslint-plugin-js","label":"1.4.1(eslint@8.55.0)","children":[{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"eslint","label":"8.55.0","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"espree","label":"9.6.1","children":[]},{"id":"acorn","label":"8.11.2","children":[]}]},{"id":"estraverse","label":"5.3.0","children":[]},{"id":"eslint","label":"8.55.0","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"globals","label":"13.23.0","children":[]},{"id":"espree","label":"9.6.1","children":[]},{"id":"json-stable-stringify-without-jsonify","label":"1.0.1","children":[]},{"id":"file-entry-cache","label":"6.0.1","children":[]},{"id":"is-glob","label":"4.0.3","children":[]},{"id":"doctrine","label":"3.0.0","children":[]},{"id":"@nodelib/fs.walk","label":"1.2.8","children":[]},{"id":"ajv","label":"6.12.6","children":[]},{"id":"glob-parent","label":"6.0.2","children":[]},{"id":"@eslint/eslintrc","label":"2.1.4","children":[]},{"id":"minimatch","label":"3.1.2","children":[]},{"id":"js-yaml","label":"4.1.0","children":[]},{"id":"optionator","label":"0.9.3","children":[]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[]},{"id":"lodash.merge","label":"4.6.2","children":[]},{"id":"text-table","label":"0.2.0","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"esquery","label":"1.5.0","children":[]},{"id":"@humanwhocodes/config-array","label":"0.11.13","children":[]},{"id":"eslint-scope","label":"7.2.2","children":[]},{"id":"chalk","label":"4.1.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"esutils","label":"2.0.3","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"imurmurhash","label":"0.1.4","children":[]},{"id":"natural-compare","label":"1.4.0","children":[]},{"id":"strip-ansi","label":"6.0.1","children":[]},{"id":"@humanwhocodes/module-importer","label":"1.0.1","children":[]},{"id":"find-up","label":"5.0.0","children":[]},{"id":"@ungap/structured-clone","label":"1.2.0","children":[]},{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"cross-spawn","label":"7.0.3","children":[]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"is-path-inside","label":"3.0.3","children":[]},{"id":"levn","label":"0.4.1","children":[]},{"id":"@eslint-community/regexpp","label":"4.10.0","children":[]},{"id":"@eslint/js","label":"8.55.0","children":[]}]}]},{"id":"@stylistic/eslint-plugin-ts","label":"1.4.1(eslint@8.55.0)(typescript@5.3.2)","children":[{"id":"@typescript-eslint/utils","label":"6.13.1(eslint@8.55.0)(typescript@5.3.2)","children":[{"id":"@typescript-eslint/types","label":"6.13.1","children":[]},{"id":"@typescript-eslint/typescript-estree","label":"6.13.1(typescript@5.3.2)","children":[]},{"id":"@types/semver","label":"7.5.6","children":[]},{"id":"eslint","label":"8.55.0","children":[]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[]},{"id":"@typescript-eslint/scope-manager","label":"6.13.1","children":[]},{"id":"@types/json-schema","label":"7.0.15","children":[]},{"id":"semver","label":"7.5.4","children":[]}]},{"id":"@stylistic/eslint-plugin-js","label":"1.4.1(eslint@8.55.0)","children":[{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"eslint","label":"8.55.0","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"espree","label":"9.6.1","children":[]},{"id":"acorn","label":"8.11.2","children":[]}]},{"id":"eslint","label":"8.55.0","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"globals","label":"13.23.0","children":[]},{"id":"espree","label":"9.6.1","children":[]},{"id":"json-stable-stringify-without-jsonify","label":"1.0.1","children":[]},{"id":"file-entry-cache","label":"6.0.1","children":[]},{"id":"is-glob","label":"4.0.3","children":[]},{"id":"doctrine","label":"3.0.0","children":[]},{"id":"@nodelib/fs.walk","label":"1.2.8","children":[]},{"id":"ajv","label":"6.12.6","children":[]},{"id":"glob-parent","label":"6.0.2","children":[]},{"id":"@eslint/eslintrc","label":"2.1.4","children":[]},{"id":"minimatch","label":"3.1.2","children":[]},{"id":"js-yaml","label":"4.1.0","children":[]},{"id":"optionator","label":"0.9.3","children":[]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[]},{"id":"lodash.merge","label":"4.6.2","children":[]},{"id":"text-table","label":"0.2.0","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"esquery","label":"1.5.0","children":[]},{"id":"@humanwhocodes/config-array","label":"0.11.13","children":[]},{"id":"eslint-scope","label":"7.2.2","children":[]},{"id":"chalk","label":"4.1.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"esutils","label":"2.0.3","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"imurmurhash","label":"0.1.4","children":[]},{"id":"natural-compare","label":"1.4.0","children":[]},{"id":"strip-ansi","label":"6.0.1","children":[]},{"id":"@humanwhocodes/module-importer","label":"1.0.1","children":[]},{"id":"find-up","label":"5.0.0","children":[]},{"id":"@ungap/structured-clone","label":"1.2.0","children":[]},{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"cross-spawn","label":"7.0.3","children":[]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"is-path-inside","label":"3.0.3","children":[]},{"id":"levn","label":"0.4.1","children":[]},{"id":"@eslint-community/regexpp","label":"4.10.0","children":[]},{"id":"@eslint/js","label":"8.55.0","children":[]}]},{"id":"graphemer","label":"1.4.0","children":[]}]},{"id":"eslint","label":"8.55.0","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"globals","label":"13.23.0","children":[{"id":"type-fest","label":"0.20.2","children":[]}]},{"id":"espree","label":"9.6.1","children":[{"id":"acorn-jsx","label":"5.3.2(acorn@8.11.2)","children":[]},{"id":"acorn","label":"8.11.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]}]},{"id":"json-stable-stringify-without-jsonify","label":"1.0.1","children":[]},{"id":"file-entry-cache","label":"6.0.1","children":[{"id":"flat-cache","label":"3.2.0","children":[]}]},{"id":"is-glob","label":"4.0.3","children":[{"id":"is-extglob","label":"2.1.1","children":[]}]},{"id":"doctrine","label":"3.0.0","children":[{"id":"esutils","label":"2.0.3","children":[]}]},{"id":"@nodelib/fs.walk","label":"1.2.8","children":[{"id":"fastq","label":"1.15.0","children":[]},{"id":"@nodelib/fs.scandir","label":"2.1.5","children":[]}]},{"id":"ajv","label":"6.12.6","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"json-schema-traverse","label":"0.4.1","children":[]},{"id":"fast-json-stable-stringify","label":"2.1.0","children":[]},{"id":"uri-js","label":"4.4.1","children":[]}]},{"id":"glob-parent","label":"6.0.2","children":[{"id":"is-glob","label":"4.0.3","children":[]}]},{"id":"@eslint/eslintrc","label":"2.1.4","children":[{"id":"strip-json-comments","label":"3.1.1","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"espree","label":"9.6.1","children":[]},{"id":"ajv","label":"6.12.6","children":[]},{"id":"import-fresh","label":"3.3.0","children":[]},{"id":"globals","label":"13.23.0","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"minimatch","label":"3.1.2","children":[]},{"id":"js-yaml","label":"4.1.0","children":[]}]},{"id":"minimatch","label":"3.1.2","children":[{"id":"brace-expansion","label":"1.1.11","children":[]}]},{"id":"js-yaml","label":"4.1.0","children":[{"id":"argparse","label":"2.0.1","children":[]}]},{"id":"optionator","label":"0.9.3","children":[{"id":"deep-is","label":"0.1.4","children":[]},{"id":"@aashutoshrathi/word-wrap","label":"1.2.6","children":[]},{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"levn","label":"0.4.1","children":[]},{"id":"type-check","label":"0.4.0","children":[]},{"id":"fast-levenshtein","label":"2.0.6","children":[]}]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"eslint","label":"8.55.0","children":[]}]},{"id":"lodash.merge","label":"4.6.2","children":[]},{"id":"text-table","label":"0.2.0","children":[]},{"id":"debug","label":"4.3.4","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"esquery","label":"1.5.0","children":[{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"@humanwhocodes/config-array","label":"0.11.13","children":[{"id":"@humanwhocodes/object-schema","label":"2.0.1","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"minimatch","label":"3.1.2","children":[]}]},{"id":"eslint-scope","label":"7.2.2","children":[{"id":"esrecurse","label":"4.3.0","children":[]},{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"chalk","label":"4.1.2","children":[{"id":"ansi-styles","label":"4.3.0","children":[]},{"id":"supports-color","label":"7.2.0","children":[]}]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"esutils","label":"2.0.3","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"imurmurhash","label":"0.1.4","children":[]},{"id":"natural-compare","label":"1.4.0","children":[]},{"id":"strip-ansi","label":"6.0.1","children":[{"id":"ansi-regex","label":"5.0.1","children":[]}]},{"id":"@humanwhocodes/module-importer","label":"1.0.1","children":[]},{"id":"find-up","label":"5.0.0","children":[{"id":"path-exists","label":"4.0.0","children":[]},{"id":"locate-path","label":"6.0.0","children":[]}]},{"id":"@ungap/structured-clone","label":"1.2.0","children":[]},{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"cross-spawn","label":"7.0.3","children":[{"id":"path-key","label":"3.1.1","children":[]},{"id":"shebang-command","label":"2.0.0","children":[]},{"id":"which","label":"2.0.2","children":[]}]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"is-path-inside","label":"3.0.3","children":[]},{"id":"levn","label":"0.4.1","children":[{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"type-check","label":"0.4.0","children":[]}]},{"id":"@eslint-community/regexpp","label":"4.10.0","children":[]},{"id":"@eslint/js","label":"8.55.0","children":[]}]}]},{"id":"next","label":"14.0.3(react-dom@18.2.0)(react@18.2.0)","children":[{"id":"busboy","label":"1.6.0","children":[{"id":"streamsearch","label":"1.1.0","children":[]}]},{"id":"caniuse-lite","label":"1.0.30001566","children":[]},{"id":"react-dom","label":"18.2.0(react@18.2.0)","children":[{"id":"scheduler","label":"0.23.0","children":[{"id":"loose-envify","label":"1.4.0","children":[]}]},{"id":"loose-envify","label":"1.4.0","children":[{"id":"js-tokens","label":"4.0.0","children":[]}]},{"id":"react","label":"18.2.0","children":[{"id":"loose-envify","label":"1.4.0","children":[]}]}]},{"id":"@next/env","label":"14.0.3","children":[]},{"id":"styled-jsx","label":"5.1.1(react@18.2.0)","children":[{"id":"client-only","label":"0.0.1","children":[]},{"id":"react","label":"18.2.0","children":[{"id":"loose-envify","label":"1.4.0","children":[]}]}]},{"id":"watchpack","label":"2.4.0","children":[{"id":"graceful-fs","label":"4.2.11","children":[]},{"id":"glob-to-regexp","label":"0.4.1","children":[]}]},{"id":"postcss","label":"8.4.31","children":[{"id":"picocolors","label":"1.0.0","children":[]},{"id":"source-map-js","label":"1.0.2","children":[]},{"id":"nanoid","label":"3.3.7","children":[]}]},{"id":"@swc/helpers","label":"0.5.2","children":[{"id":"tslib","label":"2.6.2","children":[]}]},{"id":"react","label":"18.2.0","children":[{"id":"loose-envify","label":"1.4.0","children":[{"id":"js-tokens","label":"4.0.0","children":[]}]}]}]},{"id":"react","label":"18.2.0","children":[{"id":"loose-envify","label":"1.4.0","children":[{"id":"js-tokens","label":"4.0.0","children":[]}]}]},{"id":"eslint","label":"8.55.0","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"globals","label":"13.23.0","children":[{"id":"type-fest","label":"0.20.2","children":[]}]},{"id":"espree","label":"9.6.1","children":[{"id":"acorn-jsx","label":"5.3.2(acorn@8.11.2)","children":[{"id":"acorn","label":"8.11.2","children":[]}]},{"id":"acorn","label":"8.11.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]}]},{"id":"json-stable-stringify-without-jsonify","label":"1.0.1","children":[]},{"id":"file-entry-cache","label":"6.0.1","children":[{"id":"flat-cache","label":"3.2.0","children":[{"id":"rimraf","label":"3.0.2","children":[]},{"id":"flatted","label":"3.2.9","children":[]},{"id":"keyv","label":"4.5.4","children":[]}]}]},{"id":"is-glob","label":"4.0.3","children":[{"id":"is-extglob","label":"2.1.1","children":[]}]},{"id":"doctrine","label":"3.0.0","children":[{"id":"esutils","label":"2.0.3","children":[]}]},{"id":"@nodelib/fs.walk","label":"1.2.8","children":[{"id":"fastq","label":"1.15.0","children":[{"id":"reusify","label":"1.0.4","children":[]}]},{"id":"@nodelib/fs.scandir","label":"2.1.5","children":[{"id":"@nodelib/fs.stat","label":"2.0.5","children":[]},{"id":"run-parallel","label":"1.2.0","children":[]}]}]},{"id":"ajv","label":"6.12.6","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"json-schema-traverse","label":"0.4.1","children":[]},{"id":"fast-json-stable-stringify","label":"2.1.0","children":[]},{"id":"uri-js","label":"4.4.1","children":[{"id":"punycode","label":"2.3.1","children":[]}]}]},{"id":"glob-parent","label":"6.0.2","children":[{"id":"is-glob","label":"4.0.3","children":[{"id":"is-extglob","label":"2.1.1","children":[]}]}]},{"id":"@eslint/eslintrc","label":"2.1.4","children":[{"id":"strip-json-comments","label":"3.1.1","children":[]},{"id":"debug","label":"4.3.4","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"espree","label":"9.6.1","children":[{"id":"acorn-jsx","label":"5.3.2(acorn@8.11.2)","children":[]},{"id":"acorn","label":"8.11.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]}]},{"id":"ajv","label":"6.12.6","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"json-schema-traverse","label":"0.4.1","children":[]},{"id":"fast-json-stable-stringify","label":"2.1.0","children":[]},{"id":"uri-js","label":"4.4.1","children":[]}]},{"id":"import-fresh","label":"3.3.0","children":[{"id":"resolve-from","label":"4.0.0","children":[]},{"id":"parent-module","label":"1.0.1","children":[]}]},{"id":"globals","label":"13.23.0","children":[{"id":"type-fest","label":"0.20.2","children":[]}]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"minimatch","label":"3.1.2","children":[{"id":"brace-expansion","label":"1.1.11","children":[]}]},{"id":"js-yaml","label":"4.1.0","children":[{"id":"argparse","label":"2.0.1","children":[]}]}]},{"id":"minimatch","label":"3.1.2","children":[{"id":"brace-expansion","label":"1.1.11","children":[{"id":"balanced-match","label":"1.0.2","children":[]},{"id":"concat-map","label":"0.0.1","children":[]}]}]},{"id":"js-yaml","label":"4.1.0","children":[{"id":"argparse","label":"2.0.1","children":[]}]},{"id":"optionator","label":"0.9.3","children":[{"id":"deep-is","label":"0.1.4","children":[]},{"id":"@aashutoshrathi/word-wrap","label":"1.2.6","children":[]},{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"levn","label":"0.4.1","children":[{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"type-check","label":"0.4.0","children":[]}]},{"id":"type-check","label":"0.4.0","children":[{"id":"prelude-ls","label":"1.2.1","children":[]}]},{"id":"fast-levenshtein","label":"2.0.6","children":[]}]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"eslint","label":"8.55.0","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"globals","label":"13.23.0","children":[]},{"id":"espree","label":"9.6.1","children":[]},{"id":"json-stable-stringify-without-jsonify","label":"1.0.1","children":[]},{"id":"file-entry-cache","label":"6.0.1","children":[]},{"id":"is-glob","label":"4.0.3","children":[]},{"id":"doctrine","label":"3.0.0","children":[]},{"id":"@nodelib/fs.walk","label":"1.2.8","children":[]},{"id":"ajv","label":"6.12.6","children":[]},{"id":"glob-parent","label":"6.0.2","children":[]},{"id":"@eslint/eslintrc","label":"2.1.4","children":[]},{"id":"minimatch","label":"3.1.2","children":[]},{"id":"js-yaml","label":"4.1.0","children":[]},{"id":"optionator","label":"0.9.3","children":[]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[]},{"id":"lodash.merge","label":"4.6.2","children":[]},{"id":"text-table","label":"0.2.0","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"esquery","label":"1.5.0","children":[]},{"id":"@humanwhocodes/config-array","label":"0.11.13","children":[]},{"id":"eslint-scope","label":"7.2.2","children":[]},{"id":"chalk","label":"4.1.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"esutils","label":"2.0.3","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"imurmurhash","label":"0.1.4","children":[]},{"id":"natural-compare","label":"1.4.0","children":[]},{"id":"strip-ansi","label":"6.0.1","children":[]},{"id":"@humanwhocodes/module-importer","label":"1.0.1","children":[]},{"id":"find-up","label":"5.0.0","children":[]},{"id":"@ungap/structured-clone","label":"1.2.0","children":[]},{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"cross-spawn","label":"7.0.3","children":[]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"is-path-inside","label":"3.0.3","children":[]},{"id":"levn","label":"0.4.1","children":[]},{"id":"@eslint-community/regexpp","label":"4.10.0","children":[]},{"id":"@eslint/js","label":"8.55.0","children":[]}]}]},{"id":"lodash.merge","label":"4.6.2","children":[]},{"id":"text-table","label":"0.2.0","children":[]},{"id":"debug","label":"4.3.4","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"esquery","label":"1.5.0","children":[{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"@humanwhocodes/config-array","label":"0.11.13","children":[{"id":"@humanwhocodes/object-schema","label":"2.0.1","children":[]},{"id":"debug","label":"4.3.4","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"minimatch","label":"3.1.2","children":[{"id":"brace-expansion","label":"1.1.11","children":[]}]}]},{"id":"eslint-scope","label":"7.2.2","children":[{"id":"esrecurse","label":"4.3.0","children":[{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"chalk","label":"4.1.2","children":[{"id":"ansi-styles","label":"4.3.0","children":[{"id":"color-convert","label":"2.0.1","children":[]}]},{"id":"supports-color","label":"7.2.0","children":[{"id":"has-flag","label":"4.0.0","children":[]}]}]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"esutils","label":"2.0.3","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"imurmurhash","label":"0.1.4","children":[]},{"id":"natural-compare","label":"1.4.0","children":[]},{"id":"strip-ansi","label":"6.0.1","children":[{"id":"ansi-regex","label":"5.0.1","children":[]}]},{"id":"@humanwhocodes/module-importer","label":"1.0.1","children":[]},{"id":"find-up","label":"5.0.0","children":[{"id":"path-exists","label":"4.0.0","children":[]},{"id":"locate-path","label":"6.0.0","children":[{"id":"p-locate","label":"5.0.0","children":[]}]}]},{"id":"@ungap/structured-clone","label":"1.2.0","children":[]},{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"cross-spawn","label":"7.0.3","children":[{"id":"path-key","label":"3.1.1","children":[]},{"id":"shebang-command","label":"2.0.0","children":[{"id":"shebang-regex","label":"3.0.0","children":[]}]},{"id":"which","label":"2.0.2","children":[{"id":"isexe","label":"2.0.0","children":[]}]}]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"is-path-inside","label":"3.0.3","children":[]},{"id":"levn","label":"0.4.1","children":[{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"type-check","label":"0.4.0","children":[{"id":"prelude-ls","label":"1.2.1","children":[]}]}]},{"id":"@eslint-community/regexpp","label":"4.10.0","children":[]},{"id":"@eslint/js","label":"8.55.0","children":[]}]},{"id":"eslint-import-resolver-typescript","label":"3.6.1(@typescript-eslint/parser@6.13.1)(eslint-plugin-import@2.29.0)(eslint@8.55.0)","children":[{"id":"debug","label":"4.3.4","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"eslint-module-utils","label":"2.8.0(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.55.0)","children":[{"id":"eslint","label":"8.55.0","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"globals","label":"13.23.0","children":[]},{"id":"espree","label":"9.6.1","children":[]},{"id":"json-stable-stringify-without-jsonify","label":"1.0.1","children":[]},{"id":"file-entry-cache","label":"6.0.1","children":[]},{"id":"is-glob","label":"4.0.3","children":[]},{"id":"doctrine","label":"3.0.0","children":[]},{"id":"@nodelib/fs.walk","label":"1.2.8","children":[]},{"id":"ajv","label":"6.12.6","children":[]},{"id":"glob-parent","label":"6.0.2","children":[]},{"id":"@eslint/eslintrc","label":"2.1.4","children":[]},{"id":"minimatch","label":"3.1.2","children":[]},{"id":"js-yaml","label":"4.1.0","children":[]},{"id":"optionator","label":"0.9.3","children":[]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[]},{"id":"lodash.merge","label":"4.6.2","children":[]},{"id":"text-table","label":"0.2.0","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"esquery","label":"1.5.0","children":[]},{"id":"@humanwhocodes/config-array","label":"0.11.13","children":[]},{"id":"eslint-scope","label":"7.2.2","children":[]},{"id":"chalk","label":"4.1.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"esutils","label":"2.0.3","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"imurmurhash","label":"0.1.4","children":[]},{"id":"natural-compare","label":"1.4.0","children":[]},{"id":"strip-ansi","label":"6.0.1","children":[]},{"id":"@humanwhocodes/module-importer","label":"1.0.1","children":[]},{"id":"find-up","label":"5.0.0","children":[]},{"id":"@ungap/structured-clone","label":"1.2.0","children":[]},{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"cross-spawn","label":"7.0.3","children":[]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"is-path-inside","label":"3.0.3","children":[]},{"id":"levn","label":"0.4.1","children":[]},{"id":"@eslint-community/regexpp","label":"4.10.0","children":[]},{"id":"@eslint/js","label":"8.55.0","children":[]}]},{"id":"eslint-import-resolver-node","label":"0.3.9","children":[{"id":"is-core-module","label":"2.13.1","children":[]},{"id":"debug","label":"3.2.7","children":[]},{"id":"resolve","label":"1.22.8","children":[]}]},{"id":"debug","label":"3.2.7","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"eslint-import-resolver-typescript","label":"3.6.1(@typescript-eslint/parser@6.13.1)(eslint-plugin-import@2.29.0)(eslint@8.55.0)","children":[{"id":"debug","label":"4.3.4","children":[]},{"id":"eslint-module-utils","label":"2.8.0(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.55.0)","children":[]},{"id":"eslint-plugin-import","label":"2.29.0(eslint@8.55.0)","children":[]},{"id":"is-core-module","label":"2.13.1","children":[]},{"id":"is-glob","label":"4.0.3","children":[]},{"id":"fast-glob","label":"3.3.2","children":[]},{"id":"enhanced-resolve","label":"5.15.0","children":[]},{"id":"eslint","label":"8.55.0","children":[]},{"id":"get-tsconfig","label":"4.7.2","children":[]}]},{"id":"@typescript-eslint/parser","label":"6.13.1(eslint@8.55.0)(typescript@5.3.2)","children":[{"id":"debug","label":"4.3.4","children":[]},{"id":"eslint","label":"8.55.0","children":[]},{"id":"@typescript-eslint/typescript-estree","label":"6.13.1(typescript@5.3.2)","children":[]},{"id":"@typescript-eslint/visitor-keys","label":"6.13.1","children":[]},{"id":"@typescript-eslint/scope-manager","label":"6.13.1","children":[]},{"id":"typescript","label":"5.3.2","children":[]},{"id":"@typescript-eslint/types","label":"6.13.1","children":[]}]}]},{"id":"eslint-plugin-import","label":"2.29.0(eslint@8.55.0)","children":[{"id":"object.groupby","label":"1.0.1","children":[{"id":"es-abstract","label":"1.22.3","children":[]},{"id":"call-bind","label":"1.0.5","children":[]},{"id":"define-properties","label":"1.2.1","children":[]},{"id":"get-intrinsic","label":"1.2.2","children":[]}]},{"id":"eslint-import-resolver-node","label":"0.3.9","children":[{"id":"is-core-module","label":"2.13.1","children":[]},{"id":"debug","label":"3.2.7","children":[]},{"id":"resolve","label":"1.22.8","children":[]}]},{"id":"semver","label":"6.3.1","children":[]},{"id":"object.values","label":"1.1.7","children":[{"id":"define-properties","label":"1.2.1","children":[]},{"id":"call-bind","label":"1.0.5","children":[]},{"id":"es-abstract","label":"1.22.3","children":[]}]},{"id":"tsconfig-paths","label":"3.14.2","children":[{"id":"json5","label":"1.0.2","children":[]},{"id":"minimist","label":"1.2.8","children":[]},{"id":"strip-bom","label":"3.0.0","children":[]},{"id":"@types/json5","label":"0.0.29","children":[]}]},{"id":"eslint","label":"8.55.0","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"globals","label":"13.23.0","children":[]},{"id":"espree","label":"9.6.1","children":[]},{"id":"json-stable-stringify-without-jsonify","label":"1.0.1","children":[]},{"id":"file-entry-cache","label":"6.0.1","children":[]},{"id":"is-glob","label":"4.0.3","children":[]},{"id":"doctrine","label":"3.0.0","children":[]},{"id":"@nodelib/fs.walk","label":"1.2.8","children":[]},{"id":"ajv","label":"6.12.6","children":[]},{"id":"glob-parent","label":"6.0.2","children":[]},{"id":"@eslint/eslintrc","label":"2.1.4","children":[]},{"id":"minimatch","label":"3.1.2","children":[]},{"id":"js-yaml","label":"4.1.0","children":[]},{"id":"optionator","label":"0.9.3","children":[]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[]},{"id":"lodash.merge","label":"4.6.2","children":[]},{"id":"text-table","label":"0.2.0","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"esquery","label":"1.5.0","children":[]},{"id":"@humanwhocodes/config-array","label":"0.11.13","children":[]},{"id":"eslint-scope","label":"7.2.2","children":[]},{"id":"chalk","label":"4.1.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"esutils","label":"2.0.3","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"imurmurhash","label":"0.1.4","children":[]},{"id":"natural-compare","label":"1.4.0","children":[]},{"id":"strip-ansi","label":"6.0.1","children":[]},{"id":"@humanwhocodes/module-importer","label":"1.0.1","children":[]},{"id":"find-up","label":"5.0.0","children":[]},{"id":"@ungap/structured-clone","label":"1.2.0","children":[]},{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"cross-spawn","label":"7.0.3","children":[]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"is-path-inside","label":"3.0.3","children":[]},{"id":"levn","label":"0.4.1","children":[]},{"id":"@eslint-community/regexpp","label":"4.10.0","children":[]},{"id":"@eslint/js","label":"8.55.0","children":[]}]},{"id":"is-core-module","label":"2.13.1","children":[{"id":"hasown","label":"2.0.0","children":[]}]},{"id":"array-includes","label":"3.1.7","children":[{"id":"define-properties","label":"1.2.1","children":[]},{"id":"es-abstract","label":"1.22.3","children":[]},{"id":"get-intrinsic","label":"1.2.2","children":[]},{"id":"call-bind","label":"1.0.5","children":[]},{"id":"is-string","label":"1.0.7","children":[]}]},{"id":"eslint-module-utils","label":"2.8.0(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.55.0)","children":[{"id":"eslint","label":"8.55.0","children":[]},{"id":"eslint-import-resolver-node","label":"0.3.9","children":[]},{"id":"debug","label":"3.2.7","children":[]},{"id":"eslint-import-resolver-typescript","label":"3.6.1(@typescript-eslint/parser@6.13.1)(eslint-plugin-import@2.29.0)(eslint@8.55.0)","children":[]},{"id":"@typescript-eslint/parser","label":"6.13.1(eslint@8.55.0)(typescript@5.3.2)","children":[]}]},{"id":"minimatch","label":"3.1.2","children":[{"id":"brace-expansion","label":"1.1.11","children":[]}]},{"id":"array.prototype.flat","label":"1.3.2","children":[{"id":"define-properties","label":"1.2.1","children":[]},{"id":"es-shim-unscopables","label":"1.0.2","children":[]},{"id":"call-bind","label":"1.0.5","children":[]},{"id":"es-abstract","label":"1.22.3","children":[]}]},{"id":"array.prototype.findlastindex","label":"1.2.3","children":[{"id":"define-properties","label":"1.2.1","children":[]},{"id":"call-bind","label":"1.0.5","children":[]},{"id":"es-shim-unscopables","label":"1.0.2","children":[]},{"id":"get-intrinsic","label":"1.2.2","children":[]},{"id":"es-abstract","label":"1.22.3","children":[]}]},{"id":"is-glob","label":"4.0.3","children":[{"id":"is-extglob","label":"2.1.1","children":[]}]},{"id":"object.fromentries","label":"2.0.7","children":[{"id":"es-abstract","label":"1.22.3","children":[]},{"id":"call-bind","label":"1.0.5","children":[]},{"id":"define-properties","label":"1.2.1","children":[]}]},{"id":"doctrine","label":"2.1.0","children":[{"id":"esutils","label":"2.0.3","children":[]}]},{"id":"hasown","label":"2.0.0","children":[{"id":"function-bind","label":"1.1.2","children":[]}]},{"id":"array.prototype.flatmap","label":"1.3.2","children":[{"id":"call-bind","label":"1.0.5","children":[]},{"id":"es-abstract","label":"1.22.3","children":[]},{"id":"define-properties","label":"1.2.1","children":[]},{"id":"es-shim-unscopables","label":"1.0.2","children":[]}]},{"id":"debug","label":"3.2.7","children":[{"id":"ms","label":"2.1.2","children":[]}]}]},{"id":"is-core-module","label":"2.13.1","children":[{"id":"hasown","label":"2.0.0","children":[{"id":"function-bind","label":"1.1.2","children":[]}]}]},{"id":"is-glob","label":"4.0.3","children":[{"id":"is-extglob","label":"2.1.1","children":[]}]},{"id":"fast-glob","label":"3.3.2","children":[{"id":"@nodelib/fs.walk","label":"1.2.8","children":[{"id":"fastq","label":"1.15.0","children":[]},{"id":"@nodelib/fs.scandir","label":"2.1.5","children":[]}]},{"id":"@nodelib/fs.stat","label":"2.0.5","children":[]},{"id":"glob-parent","label":"5.1.2","children":[{"id":"is-glob","label":"4.0.3","children":[]}]},{"id":"merge2","label":"1.4.1","children":[]},{"id":"micromatch","label":"4.0.5","children":[{"id":"picomatch","label":"2.3.1","children":[]},{"id":"braces","label":"3.0.2","children":[]}]}]},{"id":"enhanced-resolve","label":"5.15.0","children":[{"id":"graceful-fs","label":"4.2.11","children":[]},{"id":"tapable","label":"2.2.1","children":[]}]},{"id":"eslint","label":"8.55.0","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"globals","label":"13.23.0","children":[{"id":"type-fest","label":"0.20.2","children":[]}]},{"id":"espree","label":"9.6.1","children":[{"id":"acorn-jsx","label":"5.3.2(acorn@8.11.2)","children":[]},{"id":"acorn","label":"8.11.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]}]},{"id":"json-stable-stringify-without-jsonify","label":"1.0.1","children":[]},{"id":"file-entry-cache","label":"6.0.1","children":[{"id":"flat-cache","label":"3.2.0","children":[]}]},{"id":"is-glob","label":"4.0.3","children":[{"id":"is-extglob","label":"2.1.1","children":[]}]},{"id":"doctrine","label":"3.0.0","children":[{"id":"esutils","label":"2.0.3","children":[]}]},{"id":"@nodelib/fs.walk","label":"1.2.8","children":[{"id":"fastq","label":"1.15.0","children":[]},{"id":"@nodelib/fs.scandir","label":"2.1.5","children":[]}]},{"id":"ajv","label":"6.12.6","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"json-schema-traverse","label":"0.4.1","children":[]},{"id":"fast-json-stable-stringify","label":"2.1.0","children":[]},{"id":"uri-js","label":"4.4.1","children":[]}]},{"id":"glob-parent","label":"6.0.2","children":[{"id":"is-glob","label":"4.0.3","children":[]}]},{"id":"@eslint/eslintrc","label":"2.1.4","children":[{"id":"strip-json-comments","label":"3.1.1","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"espree","label":"9.6.1","children":[]},{"id":"ajv","label":"6.12.6","children":[]},{"id":"import-fresh","label":"3.3.0","children":[]},{"id":"globals","label":"13.23.0","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"minimatch","label":"3.1.2","children":[]},{"id":"js-yaml","label":"4.1.0","children":[]}]},{"id":"minimatch","label":"3.1.2","children":[{"id":"brace-expansion","label":"1.1.11","children":[]}]},{"id":"js-yaml","label":"4.1.0","children":[{"id":"argparse","label":"2.0.1","children":[]}]},{"id":"optionator","label":"0.9.3","children":[{"id":"deep-is","label":"0.1.4","children":[]},{"id":"@aashutoshrathi/word-wrap","label":"1.2.6","children":[]},{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"levn","label":"0.4.1","children":[]},{"id":"type-check","label":"0.4.0","children":[]},{"id":"fast-levenshtein","label":"2.0.6","children":[]}]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"eslint","label":"8.55.0","children":[]}]},{"id":"lodash.merge","label":"4.6.2","children":[]},{"id":"text-table","label":"0.2.0","children":[]},{"id":"debug","label":"4.3.4","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"esquery","label":"1.5.0","children":[{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"@humanwhocodes/config-array","label":"0.11.13","children":[{"id":"@humanwhocodes/object-schema","label":"2.0.1","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"minimatch","label":"3.1.2","children":[]}]},{"id":"eslint-scope","label":"7.2.2","children":[{"id":"esrecurse","label":"4.3.0","children":[]},{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"chalk","label":"4.1.2","children":[{"id":"ansi-styles","label":"4.3.0","children":[]},{"id":"supports-color","label":"7.2.0","children":[]}]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"esutils","label":"2.0.3","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"imurmurhash","label":"0.1.4","children":[]},{"id":"natural-compare","label":"1.4.0","children":[]},{"id":"strip-ansi","label":"6.0.1","children":[{"id":"ansi-regex","label":"5.0.1","children":[]}]},{"id":"@humanwhocodes/module-importer","label":"1.0.1","children":[]},{"id":"find-up","label":"5.0.0","children":[{"id":"path-exists","label":"4.0.0","children":[]},{"id":"locate-path","label":"6.0.0","children":[]}]},{"id":"@ungap/structured-clone","label":"1.2.0","children":[]},{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"cross-spawn","label":"7.0.3","children":[{"id":"path-key","label":"3.1.1","children":[]},{"id":"shebang-command","label":"2.0.0","children":[]},{"id":"which","label":"2.0.2","children":[]}]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"is-path-inside","label":"3.0.3","children":[]},{"id":"levn","label":"0.4.1","children":[{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"type-check","label":"0.4.0","children":[]}]},{"id":"@eslint-community/regexpp","label":"4.10.0","children":[]},{"id":"@eslint/js","label":"8.55.0","children":[]}]},{"id":"get-tsconfig","label":"4.7.2","children":[{"id":"resolve-pkg-maps","label":"1.0.0","children":[]}]}]},{"id":"@typescript-eslint/parser","label":"6.13.1(eslint@8.55.0)(typescript@5.3.2)","children":[{"id":"debug","label":"4.3.4","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"eslint","label":"8.55.0","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"globals","label":"13.23.0","children":[{"id":"type-fest","label":"0.20.2","children":[]}]},{"id":"espree","label":"9.6.1","children":[{"id":"acorn-jsx","label":"5.3.2(acorn@8.11.2)","children":[]},{"id":"acorn","label":"8.11.2","children":[]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]}]},{"id":"json-stable-stringify-without-jsonify","label":"1.0.1","children":[]},{"id":"file-entry-cache","label":"6.0.1","children":[{"id":"flat-cache","label":"3.2.0","children":[]}]},{"id":"is-glob","label":"4.0.3","children":[{"id":"is-extglob","label":"2.1.1","children":[]}]},{"id":"doctrine","label":"3.0.0","children":[{"id":"esutils","label":"2.0.3","children":[]}]},{"id":"@nodelib/fs.walk","label":"1.2.8","children":[{"id":"fastq","label":"1.15.0","children":[]},{"id":"@nodelib/fs.scandir","label":"2.1.5","children":[]}]},{"id":"ajv","label":"6.12.6","children":[{"id":"fast-deep-equal","label":"3.1.3","children":[]},{"id":"json-schema-traverse","label":"0.4.1","children":[]},{"id":"fast-json-stable-stringify","label":"2.1.0","children":[]},{"id":"uri-js","label":"4.4.1","children":[]}]},{"id":"glob-parent","label":"6.0.2","children":[{"id":"is-glob","label":"4.0.3","children":[]}]},{"id":"@eslint/eslintrc","label":"2.1.4","children":[{"id":"strip-json-comments","label":"3.1.1","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"espree","label":"9.6.1","children":[]},{"id":"ajv","label":"6.12.6","children":[]},{"id":"import-fresh","label":"3.3.0","children":[]},{"id":"globals","label":"13.23.0","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"minimatch","label":"3.1.2","children":[]},{"id":"js-yaml","label":"4.1.0","children":[]}]},{"id":"minimatch","label":"3.1.2","children":[{"id":"brace-expansion","label":"1.1.11","children":[]}]},{"id":"js-yaml","label":"4.1.0","children":[{"id":"argparse","label":"2.0.1","children":[]}]},{"id":"optionator","label":"0.9.3","children":[{"id":"deep-is","label":"0.1.4","children":[]},{"id":"@aashutoshrathi/word-wrap","label":"1.2.6","children":[]},{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"levn","label":"0.4.1","children":[]},{"id":"type-check","label":"0.4.0","children":[]},{"id":"fast-levenshtein","label":"2.0.6","children":[]}]},{"id":"@eslint-community/eslint-utils","label":"4.4.0(eslint@8.55.0)","children":[{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"eslint","label":"8.55.0","children":[]}]},{"id":"lodash.merge","label":"4.6.2","children":[]},{"id":"text-table","label":"0.2.0","children":[]},{"id":"debug","label":"4.3.4","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"esquery","label":"1.5.0","children":[{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"@humanwhocodes/config-array","label":"0.11.13","children":[{"id":"@humanwhocodes/object-schema","label":"2.0.1","children":[]},{"id":"debug","label":"4.3.4","children":[]},{"id":"minimatch","label":"3.1.2","children":[]}]},{"id":"eslint-scope","label":"7.2.2","children":[{"id":"esrecurse","label":"4.3.0","children":[]},{"id":"estraverse","label":"5.3.0","children":[]}]},{"id":"chalk","label":"4.1.2","children":[{"id":"ansi-styles","label":"4.3.0","children":[]},{"id":"supports-color","label":"7.2.0","children":[]}]},{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"esutils","label":"2.0.3","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"imurmurhash","label":"0.1.4","children":[]},{"id":"natural-compare","label":"1.4.0","children":[]},{"id":"strip-ansi","label":"6.0.1","children":[{"id":"ansi-regex","label":"5.0.1","children":[]}]},{"id":"@humanwhocodes/module-importer","label":"1.0.1","children":[]},{"id":"find-up","label":"5.0.0","children":[{"id":"path-exists","label":"4.0.0","children":[]},{"id":"locate-path","label":"6.0.0","children":[]}]},{"id":"@ungap/structured-clone","label":"1.2.0","children":[]},{"id":"escape-string-regexp","label":"4.0.0","children":[]},{"id":"cross-spawn","label":"7.0.3","children":[{"id":"path-key","label":"3.1.1","children":[]},{"id":"shebang-command","label":"2.0.0","children":[]},{"id":"which","label":"2.0.2","children":[]}]},{"id":"graphemer","label":"1.4.0","children":[]},{"id":"is-path-inside","label":"3.0.3","children":[]},{"id":"levn","label":"0.4.1","children":[{"id":"prelude-ls","label":"1.2.1","children":[]},{"id":"type-check","label":"0.4.0","children":[]}]},{"id":"@eslint-community/regexpp","label":"4.10.0","children":[]},{"id":"@eslint/js","label":"8.55.0","children":[]}]},{"id":"@typescript-eslint/typescript-estree","label":"6.13.1(typescript@5.3.2)","children":[{"id":"debug","label":"4.3.4","children":[{"id":"ms","label":"2.1.2","children":[]}]},{"id":"typescript","label":"5.3.2","children":[]},{"id":"ts-api-utils","label":"1.0.3(typescript@5.3.2)","children":[{"id":"typescript","label":"5.3.2","children":[]}]},{"id":"is-glob","label":"4.0.3","children":[{"id":"is-extglob","label":"2.1.1","children":[]}]},{"id":"semver","label":"7.5.4","children":[]},{"id":"@typescript-eslint/types","label":"6.13.1","children":[]},{"id":"@typescript-eslint/visitor-keys","label":"6.13.1","children":[{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"@typescript-eslint/types","label":"6.13.1","children":[]}]},{"id":"globby","label":"11.1.0","children":[{"id":"array-union","label":"2.1.0","children":[]},{"id":"dir-glob","label":"3.0.1","children":[]},{"id":"ignore","label":"5.3.0","children":[]},{"id":"merge2","label":"1.4.1","children":[]},{"id":"slash","label":"3.0.0","children":[]},{"id":"fast-glob","label":"3.3.2","children":[]}]}]},{"id":"@typescript-eslint/visitor-keys","label":"6.13.1","children":[{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"@typescript-eslint/types","label":"6.13.1","children":[]}]},{"id":"@typescript-eslint/scope-manager","label":"6.13.1","children":[{"id":"@typescript-eslint/visitor-keys","label":"6.13.1","children":[{"id":"eslint-visitor-keys","label":"3.4.3","children":[]},{"id":"@typescript-eslint/types","label":"6.13.1","children":[]}]},{"id":"@typescript-eslint/types","label":"6.13.1","children":[]}]},{"id":"typescript","label":"5.3.2","children":[]},{"id":"@typescript-eslint/types","label":"6.13.1","children":[]}]}]}]}
+{
+  "id": "__root__",
+  "label": "1.0.0",
+  "children": [
+    {
+      "id": "@plumbiu/eslint-config",
+      "label": "^0.1.10",
+      "children": [
+        {
+          "id": "eslint-import-resolver-typescript",
+          "label": "3.6.1(@typescript-eslint/parser@6.13.1)(eslint-plugin-import@2.29.0)(eslint@8.55.0)",
+          "children": [
+            {
+              "id": "eslint-module-utils",
+              "label": "2.8.0(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.55.0)",
+              "children": [
+                { "id": "debug_", "label": "3.2.7", "children": [] },
+                {
+                  "id": "eslint-import-resolver-typescript_",
+                  "label": "3.6.1(@typescript-eslint/parser@6.13.1)(eslint-plugin-import@2.29.0)(eslint@8.55.0)",
+                  "children": []
+                },
+                { "id": "eslint___", "label": "8.55.0", "children": [] },
+                {
+                  "id": "@typescript-eslint/parser_",
+                  "label": "6.13.1(eslint@8.55.0)(typescript@5.3.2)",
+                  "children": []
+                },
+                {
+                  "id": "eslint-import-resolver-node",
+                  "label": "0.3.9",
+                  "children": [
+                    { "id": "debug__", "label": "3.2.7", "children": [] },
+                    {
+                      "id": "is-core-module_",
+                      "label": "2.13.1",
+                      "children": []
+                    },
+                    { "id": "resolve", "label": "1.22.8", "children": [] }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "eslint-plugin-import",
+              "label": "2.29.0(eslint@8.55.0)",
+              "children": [
+                {
+                  "id": "array-includes",
+                  "label": "3.1.7",
+                  "children": [
+                    { "id": "is-string", "label": "1.0.7", "children": [] },
+                    { "id": "es-abstract", "label": "1.22.3", "children": [] },
+                    { "id": "call-bind", "label": "1.0.5", "children": [] },
+                    {
+                      "id": "define-properties",
+                      "label": "1.2.1",
+                      "children": []
+                    },
+                    { "id": "get-intrinsic", "label": "1.2.2", "children": [] }
+                  ]
+                },
+                { "id": "is-glob_", "label": "4.0.3", "children": [] },
+                {
+                  "id": "array.prototype.flat",
+                  "label": "1.3.2",
+                  "children": [
+                    { "id": "call-bind_", "label": "1.0.5", "children": [] },
+                    {
+                      "id": "define-properties_",
+                      "label": "1.2.1",
+                      "children": []
+                    },
+                    { "id": "es-abstract_", "label": "1.22.3", "children": [] },
+                    {
+                      "id": "es-shim-unscopables",
+                      "label": "1.0.2",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "object.values",
+                  "label": "1.1.7",
+                  "children": [
+                    {
+                      "id": "es-abstract__",
+                      "label": "1.22.3",
+                      "children": []
+                    },
+                    {
+                      "id": "define-properties__",
+                      "label": "1.2.1",
+                      "children": []
+                    },
+                    { "id": "call-bind__", "label": "1.0.5", "children": [] }
+                  ]
+                },
+                {
+                  "id": "object.fromentries",
+                  "label": "2.0.7",
+                  "children": [
+                    {
+                      "id": "define-properties___",
+                      "label": "1.2.1",
+                      "children": []
+                    },
+                    { "id": "call-bind___", "label": "1.0.5", "children": [] },
+                    {
+                      "id": "es-abstract___",
+                      "label": "1.22.3",
+                      "children": []
+                    }
+                  ]
+                },
+                { "id": "eslint____", "label": "8.55.0", "children": [] },
+                {
+                  "id": "array.prototype.findlastindex",
+                  "label": "1.2.3",
+                  "children": [
+                    { "id": "call-bind____", "label": "1.0.5", "children": [] },
+                    {
+                      "id": "es-abstract____",
+                      "label": "1.22.3",
+                      "children": []
+                    },
+                    {
+                      "id": "es-shim-unscopables_",
+                      "label": "1.0.2",
+                      "children": []
+                    },
+                    {
+                      "id": "define-properties____",
+                      "label": "1.2.1",
+                      "children": []
+                    },
+                    { "id": "get-intrinsic_", "label": "1.2.2", "children": [] }
+                  ]
+                },
+                {
+                  "id": "array.prototype.flatmap",
+                  "label": "1.3.2",
+                  "children": [
+                    {
+                      "id": "es-shim-unscopables__",
+                      "label": "1.0.2",
+                      "children": []
+                    },
+                    {
+                      "id": "call-bind_____",
+                      "label": "1.0.5",
+                      "children": []
+                    },
+                    {
+                      "id": "es-abstract_____",
+                      "label": "1.22.3",
+                      "children": []
+                    },
+                    {
+                      "id": "define-properties_____",
+                      "label": "1.2.1",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "tsconfig-paths",
+                  "label": "3.14.2",
+                  "children": [
+                    { "id": "@types/json5", "label": "0.0.29", "children": [] },
+                    { "id": "strip-bom", "label": "3.0.0", "children": [] },
+                    { "id": "minimist", "label": "1.2.8", "children": [] },
+                    { "id": "json5", "label": "1.0.2", "children": [] }
+                  ]
+                },
+                {
+                  "id": "object.groupby",
+                  "label": "1.0.1",
+                  "children": [
+                    {
+                      "id": "define-properties______",
+                      "label": "1.2.1",
+                      "children": []
+                    },
+                    {
+                      "id": "call-bind______",
+                      "label": "1.0.5",
+                      "children": []
+                    },
+                    {
+                      "id": "get-intrinsic__",
+                      "label": "1.2.2",
+                      "children": []
+                    },
+                    {
+                      "id": "es-abstract______",
+                      "label": "1.22.3",
+                      "children": []
+                    }
+                  ]
+                },
+                { "id": "debug___", "label": "3.2.7", "children": [] },
+                {
+                  "id": "doctrine",
+                  "label": "2.1.0",
+                  "children": [
+                    { "id": "esutils", "label": "2.0.3", "children": [] }
+                  ]
+                },
+                { "id": "is-core-module__", "label": "2.13.1", "children": [] },
+                { "id": "semver", "label": "6.3.1", "children": [] },
+                {
+                  "id": "minimatch",
+                  "label": "3.1.2",
+                  "children": [
+                    {
+                      "id": "brace-expansion",
+                      "label": "1.1.11",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "eslint-import-resolver-node_",
+                  "label": "0.3.9",
+                  "children": []
+                },
+                {
+                  "id": "hasown",
+                  "label": "2.0.0",
+                  "children": [
+                    { "id": "function-bind", "label": "1.1.2", "children": [] }
+                  ]
+                },
+                {
+                  "id": "eslint-module-utils_",
+                  "label": "2.8.0(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.55.0)",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "get-tsconfig",
+              "label": "4.7.2",
+              "children": [
+                { "id": "resolve-pkg-maps", "label": "1.0.0", "children": [] }
+              ]
+            },
+            {
+              "id": "fast-glob",
+              "label": "3.3.2",
+              "children": [
+                {
+                  "id": "micromatch",
+                  "label": "4.0.5",
+                  "children": [
+                    { "id": "picomatch", "label": "2.3.1", "children": [] },
+                    { "id": "braces", "label": "3.0.2", "children": [] }
+                  ]
+                },
+                {
+                  "id": "glob-parent",
+                  "label": "5.1.2",
+                  "children": [
+                    { "id": "is-glob__", "label": "4.0.3", "children": [] }
+                  ]
+                },
+                { "id": "@nodelib/fs.stat", "label": "2.0.5", "children": [] },
+                { "id": "merge2", "label": "1.4.1", "children": [] },
+                {
+                  "id": "@nodelib/fs.walk",
+                  "label": "1.2.8",
+                  "children": [
+                    {
+                      "id": "@nodelib/fs.scandir",
+                      "label": "2.1.5",
+                      "children": []
+                    },
+                    { "id": "fastq", "label": "1.15.0", "children": [] }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "enhanced-resolve",
+              "label": "5.15.0",
+              "children": [
+                { "id": "graceful-fs", "label": "4.2.11", "children": [] },
+                { "id": "tapable", "label": "2.2.1", "children": [] }
+              ]
+            },
+            {
+              "id": "is-core-module",
+              "label": "2.13.1",
+              "children": [
+                { "id": "hasown_", "label": "2.0.0", "children": [] }
+              ]
+            },
+            { "id": "eslint__", "label": "8.55.0", "children": [] },
+            {
+              "id": "is-glob",
+              "label": "4.0.3",
+              "children": [
+                { "id": "is-extglob", "label": "2.1.1", "children": [] }
+              ]
+            },
+            {
+              "id": "debug",
+              "label": "4.3.4",
+              "children": [{ "id": "ms", "label": "2.1.3", "children": [] }]
+            }
+          ]
+        },
+        {
+          "id": "next",
+          "label": "14.0.3(react-dom@18.2.0)(react@18.2.0)",
+          "children": [
+            {
+              "id": "busboy",
+              "label": "1.6.0",
+              "children": [
+                { "id": "streamsearch", "label": "1.1.0", "children": [] }
+              ]
+            },
+            {
+              "id": "@swc/helpers",
+              "label": "0.5.2",
+              "children": [{ "id": "tslib", "label": "2.6.2", "children": [] }]
+            },
+            {
+              "id": "react-dom",
+              "label": "18.2.0(react@18.2.0)",
+              "children": [
+                {
+                  "id": "loose-envify",
+                  "label": "1.4.0",
+                  "children": [
+                    { "id": "js-tokens", "label": "4.0.0", "children": [] }
+                  ]
+                },
+                {
+                  "id": "scheduler",
+                  "label": "0.23.0",
+                  "children": [
+                    { "id": "loose-envify_", "label": "1.4.0", "children": [] }
+                  ]
+                },
+                { "id": "react__", "label": "18.2.0", "children": [] }
+              ]
+            },
+            { "id": "@next/env", "label": "14.0.3", "children": [] },
+            { "id": "react_", "label": "18.2.0", "children": [] },
+            {
+              "id": "styled-jsx",
+              "label": "5.1.1(react@18.2.0)",
+              "children": [
+                { "id": "client-only", "label": "0.0.1", "children": [] },
+                { "id": "react___", "label": "18.2.0", "children": [] }
+              ]
+            },
+            { "id": "caniuse-lite", "label": "1.0.30001566", "children": [] },
+            {
+              "id": "watchpack",
+              "label": "2.4.0",
+              "children": [
+                { "id": "graceful-fs_", "label": "4.2.11", "children": [] },
+                { "id": "glob-to-regexp", "label": "0.4.1", "children": [] }
+              ]
+            },
+            {
+              "id": "postcss",
+              "label": "8.4.31",
+              "children": [
+                { "id": "source-map-js", "label": "1.0.2", "children": [] },
+                { "id": "nanoid", "label": "3.3.7", "children": [] },
+                { "id": "picocolors", "label": "1.0.0", "children": [] }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "react",
+          "label": "18.2.0",
+          "children": [
+            { "id": "loose-envify__", "label": "1.4.0", "children": [] }
+          ]
+        },
+        {
+          "id": "@stylistic/eslint-plugin",
+          "label": "1.4.1(eslint@8.55.0)(typescript@5.3.2)",
+          "children": [
+            {
+              "id": "@stylistic/eslint-plugin-ts",
+              "label": "1.4.1(eslint@8.55.0)(typescript@5.3.2)",
+              "children": [
+                { "id": "eslint______", "label": "8.55.0", "children": [] },
+                {
+                  "id": "@typescript-eslint/utils",
+                  "label": "6.13.1(eslint@8.55.0)(typescript@5.3.2)",
+                  "children": [
+                    {
+                      "id": "@eslint-community/eslint-utils",
+                      "label": "4.4.0(eslint@8.55.0)",
+                      "children": []
+                    },
+                    { "id": "semver_", "label": "7.5.4", "children": [] },
+                    { "id": "@types/semver", "label": "7.5.6", "children": [] },
+                    {
+                      "id": "@typescript-eslint/scope-manager",
+                      "label": "6.13.1",
+                      "children": []
+                    },
+                    {
+                      "id": "eslint_______",
+                      "label": "8.55.0",
+                      "children": []
+                    },
+                    {
+                      "id": "@types/json-schema",
+                      "label": "7.0.15",
+                      "children": []
+                    },
+                    {
+                      "id": "@typescript-eslint/typescript-estree",
+                      "label": "6.13.1(typescript@5.3.2)",
+                      "children": []
+                    },
+                    {
+                      "id": "@typescript-eslint/types",
+                      "label": "6.13.1",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "@stylistic/eslint-plugin-js_",
+                  "label": "1.4.1(eslint@8.55.0)",
+                  "children": []
+                },
+                { "id": "graphemer", "label": "1.4.0", "children": [] }
+              ]
+            },
+            { "id": "eslint_____", "label": "8.55.0", "children": [] },
+            {
+              "id": "@stylistic/eslint-plugin-jsx",
+              "label": "1.4.1(eslint@8.55.0)",
+              "children": [
+                {
+                  "id": "@stylistic/eslint-plugin-js__",
+                  "label": "1.4.1(eslint@8.55.0)",
+                  "children": []
+                },
+                { "id": "eslint________", "label": "8.55.0", "children": [] },
+                { "id": "estraverse", "label": "5.3.0", "children": [] }
+              ]
+            },
+            {
+              "id": "@stylistic/eslint-plugin-js",
+              "label": "1.4.1(eslint@8.55.0)",
+              "children": [
+                {
+                  "id": "escape-string-regexp",
+                  "label": "4.0.0",
+                  "children": []
+                },
+                { "id": "graphemer_", "label": "1.4.0", "children": [] },
+                {
+                  "id": "eslint-visitor-keys",
+                  "label": "3.4.3",
+                  "children": []
+                },
+                { "id": "acorn", "label": "8.11.2", "children": [] },
+                { "id": "eslint_________", "label": "8.55.0", "children": [] },
+                {
+                  "id": "espree",
+                  "label": "9.6.1",
+                  "children": [
+                    {
+                      "id": "acorn-jsx",
+                      "label": "5.3.2(acorn@8.11.2)",
+                      "children": []
+                    },
+                    { "id": "acorn_", "label": "8.11.2", "children": [] },
+                    {
+                      "id": "eslint-visitor-keys_",
+                      "label": "3.4.3",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "@typescript-eslint/parser",
+          "label": "6.13.1(eslint@8.55.0)(typescript@5.3.2)",
+          "children": [
+            {
+              "id": "@typescript-eslint/visitor-keys",
+              "label": "6.13.1",
+              "children": [
+                {
+                  "id": "@typescript-eslint/types__",
+                  "label": "6.13.1",
+                  "children": []
+                },
+                {
+                  "id": "eslint-visitor-keys__",
+                  "label": "3.4.3",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "@typescript-eslint/typescript-estree_",
+              "label": "6.13.1(typescript@5.3.2)",
+              "children": []
+            },
+            {
+              "id": "@typescript-eslint/types_",
+              "label": "6.13.1",
+              "children": []
+            },
+            {
+              "id": "@typescript-eslint/scope-manager_",
+              "label": "6.13.1",
+              "children": []
+            },
+            { "id": "debug____", "label": "4.3.4", "children": [] },
+            { "id": "eslint__________", "label": "8.55.0", "children": [] },
+            { "id": "typescript", "label": "5.3.2", "children": [] }
+          ]
+        },
+        { "id": "eslint_", "label": "8.55.0", "children": [] },
+        {
+          "id": "eslint-plugin-i",
+          "label": "2.29.0(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.55.0)",
+          "children": [
+            { "id": "is-glob___", "label": "4.0.3", "children": [] },
+            { "id": "minimatch_", "label": "3.1.2", "children": [] },
+            { "id": "semver__", "label": "7.5.4", "children": [] },
+            {
+              "id": "eslint-module-utils__",
+              "label": "2.8.0(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.55.0)",
+              "children": []
+            },
+            { "id": "debug_____", "label": "3.2.7", "children": [] },
+            { "id": "doctrine_", "label": "2.1.0", "children": [] },
+            { "id": "get-tsconfig_", "label": "4.7.2", "children": [] },
+            { "id": "resolve_", "label": "1.22.8", "children": [] },
+            {
+              "id": "eslint-import-resolver-node__",
+              "label": "0.3.9",
+              "children": []
+            },
+            { "id": "eslint___________", "label": "8.55.0", "children": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eslint",
+      "label": "^8.55.0",
+      "children": [
+        {
+          "id": "file-entry-cache",
+          "label": "6.0.1",
+          "children": [
+            {
+              "id": "flat-cache",
+              "label": "3.2.0",
+              "children": [
+                {
+                  "id": "keyv",
+                  "label": "4.5.4",
+                  "children": [
+                    { "id": "json-buffer", "label": "3.0.1", "children": [] }
+                  ]
+                },
+                { "id": "flatted", "label": "3.2.9", "children": [] },
+                {
+                  "id": "rimraf",
+                  "label": "3.0.2",
+                  "children": [
+                    { "id": "glob", "label": "7.2.3", "children": [] }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "@eslint/eslintrc",
+          "label": "2.1.4",
+          "children": [
+            { "id": "minimatch___", "label": "3.1.2", "children": [] },
+            { "id": "ajv_", "label": "6.12.6", "children": [] },
+            { "id": "globals_", "label": "13.23.0", "children": [] },
+            { "id": "strip-json-comments", "label": "3.1.1", "children": [] },
+            {
+              "id": "import-fresh",
+              "label": "3.3.0",
+              "children": [
+                {
+                  "id": "parent-module",
+                  "label": "1.0.1",
+                  "children": [
+                    { "id": "callsites", "label": "3.1.0", "children": [] }
+                  ]
+                },
+                { "id": "resolve-from", "label": "4.0.0", "children": [] }
+              ]
+            },
+            { "id": "js-yaml_", "label": "4.1.0", "children": [] },
+            { "id": "debug_______", "label": "4.3.4", "children": [] },
+            { "id": "espree__", "label": "9.6.1", "children": [] },
+            { "id": "ignore_", "label": "5.3.0", "children": [] }
+          ]
+        },
+        { "id": "natural-compare", "label": "1.4.0", "children": [] },
+        { "id": "@ungap/structured-clone", "label": "1.2.0", "children": [] },
+        { "id": "graphemer__", "label": "1.4.0", "children": [] },
+        { "id": "eslint-visitor-keys___", "label": "3.4.3", "children": [] },
+        {
+          "id": "@eslint-community/regexpp",
+          "label": "4.10.0",
+          "children": []
+        },
+        {
+          "id": "eslint-scope",
+          "label": "7.2.2",
+          "children": [
+            { "id": "estraverse_", "label": "5.3.0", "children": [] },
+            {
+              "id": "esrecurse",
+              "label": "4.3.0",
+              "children": [
+                { "id": "estraverse__", "label": "5.3.0", "children": [] }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "find-up",
+          "label": "5.0.0",
+          "children": [
+            {
+              "id": "locate-path",
+              "label": "6.0.0",
+              "children": [
+                {
+                  "id": "p-locate",
+                  "label": "5.0.0",
+                  "children": [
+                    { "id": "p-limit", "label": "3.1.0", "children": [] }
+                  ]
+                }
+              ]
+            },
+            { "id": "path-exists", "label": "4.0.0", "children": [] }
+          ]
+        },
+        {
+          "id": "@humanwhocodes/module-importer",
+          "label": "1.0.1",
+          "children": []
+        },
+        {
+          "id": "@humanwhocodes/config-array",
+          "label": "0.11.13",
+          "children": [
+            { "id": "minimatch____", "label": "3.1.2", "children": [] },
+            {
+              "id": "@humanwhocodes/object-schema",
+              "label": "2.0.1",
+              "children": []
+            },
+            { "id": "debug________", "label": "4.3.4", "children": [] }
+          ]
+        },
+        { "id": "is-glob____", "label": "4.0.3", "children": [] },
+        {
+          "id": "json-stable-stringify-without-jsonify",
+          "label": "1.0.1",
+          "children": []
+        },
+        { "id": "imurmurhash", "label": "0.1.4", "children": [] },
+        {
+          "id": "globals",
+          "label": "13.23.0",
+          "children": [{ "id": "type-fest", "label": "0.20.2", "children": [] }]
+        },
+        { "id": "@nodelib/fs.walk_", "label": "1.2.8", "children": [] },
+        { "id": "debug______", "label": "4.3.4", "children": [] },
+        {
+          "id": "chalk",
+          "label": "4.1.2",
+          "children": [
+            {
+              "id": "ansi-styles",
+              "label": "4.3.0",
+              "children": [
+                {
+                  "id": "color-convert",
+                  "label": "2.0.1",
+                  "children": [
+                    { "id": "color-name", "label": "1.1.4", "children": [] }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "supports-color",
+              "label": "7.2.0",
+              "children": [
+                { "id": "has-flag", "label": "4.0.0", "children": [] }
+              ]
+            }
+          ]
+        },
+        { "id": "glob-parent_", "label": "6.0.2", "children": [] },
+        { "id": "ignore", "label": "5.3.0", "children": [] },
+        { "id": "esutils_", "label": "2.0.3", "children": [] },
+        {
+          "id": "levn",
+          "label": "0.4.1",
+          "children": [
+            {
+              "id": "type-check",
+              "label": "0.4.0",
+              "children": [
+                { "id": "prelude-ls_", "label": "1.2.1", "children": [] }
+              ]
+            },
+            { "id": "prelude-ls", "label": "1.2.1", "children": [] }
+          ]
+        },
+        {
+          "id": "js-yaml",
+          "label": "4.1.0",
+          "children": [{ "id": "argparse", "label": "2.0.1", "children": [] }]
+        },
+        {
+          "id": "esquery",
+          "label": "1.5.0",
+          "children": [
+            { "id": "estraverse___", "label": "5.3.0", "children": [] }
+          ]
+        },
+        { "id": "@eslint/js", "label": "8.55.0", "children": [] },
+        { "id": "text-table", "label": "0.2.0", "children": [] },
+        {
+          "id": "cross-spawn",
+          "label": "7.0.3",
+          "children": [
+            {
+              "id": "shebang-command",
+              "label": "2.0.0",
+              "children": [
+                { "id": "shebang-regex", "label": "3.0.0", "children": [] }
+              ]
+            },
+            { "id": "path-key", "label": "3.1.1", "children": [] },
+            {
+              "id": "which",
+              "label": "2.0.2",
+              "children": [{ "id": "isexe", "label": "2.0.0", "children": [] }]
+            }
+          ]
+        },
+        { "id": "lodash.merge", "label": "4.6.2", "children": [] },
+        { "id": "escape-string-regexp_", "label": "4.0.0", "children": [] },
+        { "id": "is-path-inside", "label": "3.0.3", "children": [] },
+        { "id": "espree_", "label": "9.6.1", "children": [] },
+        {
+          "id": "ajv",
+          "label": "6.12.6",
+          "children": [
+            {
+              "id": "uri-js",
+              "label": "4.4.1",
+              "children": [
+                { "id": "punycode", "label": "2.3.1", "children": [] }
+              ]
+            },
+            {
+              "id": "fast-json-stable-stringify",
+              "label": "2.1.0",
+              "children": []
+            },
+            { "id": "json-schema-traverse", "label": "0.4.1", "children": [] },
+            { "id": "fast-deep-equal_", "label": "3.1.3", "children": [] }
+          ]
+        },
+        { "id": "fast-deep-equal", "label": "3.1.3", "children": [] },
+        {
+          "id": "optionator",
+          "label": "0.9.3",
+          "children": [
+            {
+              "id": "@aashutoshrathi/word-wrap",
+              "label": "1.2.6",
+              "children": []
+            },
+            { "id": "levn_", "label": "0.4.1", "children": [] },
+            { "id": "deep-is", "label": "0.1.4", "children": [] },
+            { "id": "prelude-ls__", "label": "1.2.1", "children": [] },
+            { "id": "type-check_", "label": "0.4.0", "children": [] },
+            { "id": "fast-levenshtein", "label": "2.0.6", "children": [] }
+          ]
+        },
+        {
+          "id": "strip-ansi",
+          "label": "6.0.1",
+          "children": [{ "id": "ansi-regex", "label": "5.0.1", "children": [] }]
+        },
+        { "id": "doctrine__", "label": "3.0.0", "children": [] },
+        { "id": "minimatch__", "label": "3.1.2", "children": [] },
+        {
+          "id": "@eslint-community/eslint-utils_",
+          "label": "4.4.0(eslint@8.55.0)",
+          "children": []
+        }
+      ]
+    }
+  ]
+}
