@@ -6,5 +6,9 @@
   },
   "keywords": [],
   "author": "Plumbiu",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@plumbiu/eslint-config": "^0.1.10",
+    "eslint": "^8.55.0"
+  }
 }
