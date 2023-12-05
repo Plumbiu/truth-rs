@@ -1,22 +1,43 @@
 pub mod graph;
 pub mod json;
 pub mod tree;
-mod lock_file;
 mod util;
 
-use lock_file::{update_by_npm, update_by_pnpm, update_by_yarn};
 use std::{
     collections::HashMap,
     fs,
     path::{Path, PathBuf},
 };
-use truth_rs_type::{npm::NpmRelation, Relation, RelationsMap};
+use truth_rs_type::{package::Package, Relation, RelationsMap};
 use util::merge_map;
+
+pub fn do_gen_relations(relations: &mut RelationsMap, p: &Path) {
+    let dirs = p.read_dir().unwrap();
+    for dir in dirs {
+        let entry = dir.unwrap();
+        let path = entry.path();
+        let pkg_path = path.join("package.json");
+        if pkg_path.exists() {
+            let pkg = fs::read_to_string(pkg_path).unwrap();
+            let pkg: Package = serde_json::from_str(&pkg).unwrap();
+            relations.insert(
+                pkg.name.to_owned(),
+                Relation {
+                    name: pkg.name,
+                    version: pkg.version,
+                    packages: merge_map(pkg.dependencies, pkg.devDependencies),
+                },
+            );
+        } else if path.is_dir() {
+            do_gen_relations(relations, &path);
+        }
+    }
+}
 
 pub fn gen_relations() -> RelationsMap {
     let mut relations: RelationsMap = HashMap::default();
     let base = fs::read_to_string("package.json").unwrap();
-    let NpmRelation {
+    let Package {
         name,
         version,
         dependencies,
@@ -27,16 +48,10 @@ pub fn gen_relations() -> RelationsMap {
         Relation {
             name,
             version,
-            packages: merge_map(&dependencies, &devDependencies),
+            packages: merge_map(dependencies, devDependencies),
         },
     );
-    if Path::new("package-lock.json1").exists() {
-        update_by_npm(&mut relations);
-    } else if Path::new("yarn.lock1").exists() {
-        update_by_yarn(&mut relations);
-    } else if Path::new("pnpm-lock.yaml").exists() {
-        update_by_pnpm(&mut relations);
-    }
+    do_gen_relations(&mut relations, Path::new("node_modules"));
     relations
 }
 

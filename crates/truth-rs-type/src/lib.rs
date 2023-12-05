@@ -1,9 +1,8 @@
 #![allow(non_snake_case)]
 pub mod graph;
 pub mod json;
-pub mod npm;
-pub mod pnpm;
 pub mod tree;
+pub mod package;
 
 use ahash::RandomState;
 use serde::{Deserialize, Serialize};
@@ -13,7 +12,7 @@ pub type AHashMap = HashMap<String, String, RandomState>;
 
 #[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct Relation {
-    pub name: Option<String>,
+    pub name: String,
     pub version: String,
     pub packages: Option<AHashMap>,
 }

@@ -28,14 +28,18 @@ fn do_gen_tree(
     if max_dep <= 0 {
         return;
     }
+    let mut tree_set: HashSet<String, ahash::RandomState> = HashSet::default();
     for item in root {
         if let Some(id) = &item.id {
-            println!("{id}");
             let tree = relation_map.get(id);
             if let Some(rel) = tree {
-                if let Some(packages) = &mut item.children {
-                    map2vec(packages, &rel.packages, set);
-                    do_gen_tree(packages, max_dep - 1, relation_map, set)
+                if let None = tree_set.get(&rel.name) {
+                    tree_set.insert(id.to_owned());
+                    if let Some(packages) = &mut item.children {
+                        map2vec(packages, &rel.packages, set);
+                        do_gen_tree(packages, max_dep - 1, relation_map, set);
+                        tree_set.remove(id);
+                    }
                 }
             }
         }

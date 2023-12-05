@@ -7,11 +7,5 @@ edition = "2021"
 
 [dependencies]
 ahash = "0.8.6"
-regex = { version = "1.10.2", default-features = false, features = [
-  "std",
-  "perf",
-] }
 truth-rs-type = { path = "../truth-rs-type" }
-yarn-lock-parser = "0.5.0"
-serde_yaml = "0.9.27"
 serde_json = "1.0.108"

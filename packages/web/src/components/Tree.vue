@@ -38,7 +38,7 @@ onMounted(async () => {
       type: 'cubic-horizontal',
     },
     layout: {
-      type: 'compactBox',
+      type: 'mindmap',
       direction: 'LR',
       getId: function getId(d: { id: any; }) {
         return d.id;
