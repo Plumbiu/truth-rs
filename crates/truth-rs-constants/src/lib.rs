@@ -1,5 +1,4 @@
 use colored::Colorize;
-use std::time::Duration;
 
 fn log_logo() {
     let logo = "TRUTH-RS".green().bold();
@@ -7,14 +6,14 @@ fn log_logo() {
     println!("\n  {logo} {version}\n");
 }
 
-pub fn log_url(url: &str, duration: Duration) {
+pub fn log_url(url: &str, duration: u128) {
     log_logo();
     let url = url.cyan().underline();
     println!(
         "  {}{}: {url}\t{} {}\n",
         "✓ ".green().bold(),
         "[Finished]".dimmed(),
-        duration.as_millis().to_string().white().bold(),
+        duration,
         "ms".dimmed()
     );
 }
