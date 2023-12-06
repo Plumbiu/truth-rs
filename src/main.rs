@@ -1,4 +1,5 @@
 use clap::{Parser, Subcommand};
+use mimalloc::MiMalloc;
 use std::{path::Path, time::Instant};
 use truth_rs_constants::log_url;
 use truth_rs_core::{
@@ -6,6 +7,8 @@ use truth_rs_core::{
 };
 use truth_rs_server::start_server;
 
+#[global_allocator]
+static GLOBAL: MiMalloc = MiMalloc;
 #[derive(Debug, Parser)] // requires `derive` feature
 #[command(name = "truth-rs")]
 #[command(about = "A command-line tool for analyzing dependencies under node_moudles")]
@@ -53,14 +56,17 @@ fn main() {
         Commands::Web { port } => {
             let start = Instant::now();
             let relations = gen_relations();
-            log_url(&format!("http://localhost:{port}"), start.elapsed());
+            log_url(
+                &format!("http://localhost:{port}"),
+                start.elapsed().as_millis(),
+            );
             let _ = start_server(port, relations);
         }
         Commands::Json { depth } => {
             let start = Instant::now();
             let write_path = "pkgs.json";
             write_json(depth, &Path::new(write_path).to_path_buf());
-            log_url(write_path, start.elapsed());
+            log_url(write_path, start.elapsed().as_millis());
         }
         Commands::Html { depth } => {
             println!("Cloning {depth}");
