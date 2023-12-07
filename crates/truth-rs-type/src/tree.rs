@@ -4,6 +4,7 @@ use serde::Serialize;
 #[derive(Serialize)]
 pub struct Tree {
     pub id: String,
+    pub name: String,
     pub version: String,
     pub children: Vec<Tree>,
 }

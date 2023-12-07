@@ -7,10 +7,11 @@ fn map2vec(v: &mut Vec<Tree>, m: &Option<AHashMap>, set: &mut HashSet<String, ah
         for (id, version) in map.iter() {
             let mut uid = id.to_owned();
             while let Some(_id) = set.get(&uid) {
-                uid = format!("{}_", uid);
+                uid = uid + "_";
             }
             v.push(Tree {
                 id: uid.to_owned(),
+                name: id.to_owned(),
                 version: version.to_owned(),
                 children: Vec::default(),
             });
@@ -60,6 +61,7 @@ pub fn gen_tree(depth: u16, relation_map: &RelationsMap) -> Tree {
             );
             Tree {
                 id: "__root__".to_owned(),
+                name: rel.name.to_owned(),
                 version: rel.version.to_owned(),
                 children: tmp,
             }
