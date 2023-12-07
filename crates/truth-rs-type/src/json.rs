@@ -2,7 +2,7 @@ use serde::Serialize;
 
 #[derive(Serialize)]
 pub struct Pkgs {
-    pub name: Option<String>,
+    pub name: String,
     pub version: String,
-    pub packages: Option<Vec<Pkgs>>,
+    pub packages: Vec<Pkgs>,
 }
