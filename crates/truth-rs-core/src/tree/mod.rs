@@ -1,4 +1,4 @@
-use crate::gen_relations;
+use crate::{gen_relations, util::merge_map};
 use std::{collections::HashSet, fs, path::PathBuf, vec};
 use truth_rs_type::{tree::Tree, AHashMap, RelationsMap};
 
@@ -36,7 +36,11 @@ fn do_gen_tree(
                 if let None = tree_set.get(&rel.name) {
                     tree_set.insert(id.to_owned());
                     if let Some(packages) = &mut item.children {
-                        map2vec(packages, &rel.packages, set);
+                        map2vec(
+                            packages,
+                            &merge_map(&rel.dependencies, &rel.devDependencies),
+                            set,
+                        );
                         do_gen_tree(packages, max_dep - 1, relation_map, set);
                         tree_set.remove(id);
                     }
@@ -51,7 +55,11 @@ pub fn gen_tree(depth: u16, relation_map: &RelationsMap) -> Tree {
     let mut root_pkg = match relation_map.get("__root__") {
         Some(rel) => {
             let mut tmp: Vec<Tree> = Vec::new();
-            map2vec(&mut tmp, &rel.packages, &mut set);
+            map2vec(
+                &mut tmp,
+                &merge_map(&rel.dependencies, &rel.devDependencies),
+                &mut set,
+            );
             Tree {
                 id: Some("__root__".to_owned()),
                 label: rel.version.to_owned(),

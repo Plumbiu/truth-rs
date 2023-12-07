@@ -5,7 +5,7 @@ use truth_rs_type::{
     RelationsMap,
 };
 
-use crate::gen_relations;
+use crate::{gen_relations, util::merge_map};
 
 pub fn gen_graph(relations: &RelationsMap) -> Graph {
     let mut graph = Graph {
@@ -15,7 +15,7 @@ pub fn gen_graph(relations: &RelationsMap) -> Graph {
     let mut nodes_set: HashSet<String, RandomState> = HashSet::default();
     for (source, rel) in relations {
         nodes_set.insert(source.to_owned());
-        if let Some(deps) = &rel.packages {
+        if let Some(deps) = &merge_map(&rel.dependencies, &rel.devDependencies) {
             for target in deps.keys() {
                 nodes_set.insert(target.to_owned());
                 graph.links.push(GraphLink {

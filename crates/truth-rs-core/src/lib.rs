@@ -9,7 +9,6 @@ use std::{
     path::{Path, PathBuf},
 };
 use truth_rs_type::{package::Package, Relation, RelationsMap};
-use util::merge_map;
 
 fn insert_relations_one(relations: &mut RelationsMap, dir: &PathBuf, name: Option<String>) {
     let package_json_path = Path::join(dir, "package.json");
@@ -22,8 +21,11 @@ fn insert_relations_one(relations: &mut RelationsMap, dir: &PathBuf, name: Optio
         },
         Relation {
             name: pkg.name,
+            path: dir.as_os_str().to_os_string(),
             version: pkg.version,
-            packages: merge_map(pkg.dependencies, pkg.devDependencies),
+            dependencies: pkg.dependencies,
+            devDependencies: pkg.devDependencies,
+            homepage: pkg.homepage,
         },
     );
 }
@@ -38,19 +40,16 @@ fn insert_relations_many(relations: &mut RelationsMap, dir: &PathBuf, name: Opti
 fn insert_relations(relations: &mut RelationsMap, p: &Path) {
     let dirs = p.read_dir().unwrap();
     for dir in dirs {
-        // let path = dir.unwrap().path();
         let dir = dir.unwrap();
-        let name = dir.file_name().to_str().unwrap().to_string();
-        if name.starts_with(".") {
-            if name != String::from(".pnpm") {
+        if let Some(name) = dir.file_name().to_str() {
+            if name.starts_with(".") {
                 continue;
+            } else if name.starts_with("@") {
+                insert_relations_many(relations, &dir.path(), None);
+            } else {
+                insert_relations_one(relations, &dir.path(), None);
             }
-        } else if name.starts_with("@") {
-            insert_relations_many(relations, &dir.path(), None);
-        } else {
-            insert_relations_one(relations, &dir.path(), None);
         }
-        // println!("{:?}", dir.unwrap().file_name());
     }
 }
 

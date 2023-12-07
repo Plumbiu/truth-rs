@@ -1,12 +1,12 @@
 #![allow(non_snake_case)]
 pub mod graph;
 pub mod json;
-pub mod tree;
 pub mod package;
+pub mod tree;
 
 use ahash::RandomState;
 use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
+use std::{collections::HashMap, ffi::OsString};
 
 pub type AHashMap = HashMap<String, String, RandomState>;
 
@@ -14,6 +14,9 @@ pub type AHashMap = HashMap<String, String, RandomState>;
 pub struct Relation {
     pub name: String,
     pub version: String,
-    pub packages: Option<AHashMap>,
+    pub path: OsString,
+    pub dependencies: Option<AHashMap>,
+    pub devDependencies: Option<AHashMap>,
+    pub homepage: Option<String>,
 }
 pub type RelationsMap = HashMap<String, Relation, RandomState>;

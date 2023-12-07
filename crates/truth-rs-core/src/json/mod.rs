@@ -1,7 +1,7 @@
 use std::{fs, path::PathBuf, vec};
 use truth_rs_type::{json::Pkgs, AHashMap, RelationsMap};
 
-use crate::gen_relations;
+use crate::{gen_relations, util::merge_map};
 
 fn map2vec(v: &mut Vec<Pkgs>, m: &Option<AHashMap>) {
     if let Some(map) = m {
@@ -24,7 +24,7 @@ fn do_gen_json(root: &mut Vec<Pkgs>, max_dep: u16, relation_map: &RelationsMap) 
             let pkgs = relation_map.get(name);
             if let Some(rel) = pkgs {
                 if let Some(packages) = &mut item.packages {
-                    map2vec(packages, &rel.packages);
+                    map2vec(packages, &merge_map(&rel.dependencies, &rel.devDependencies));
                     do_gen_json(packages, max_dep - 1, relation_map)
                 }
             }
@@ -36,7 +36,7 @@ pub fn gen_json(depth: u16, relation_map: &RelationsMap) -> Pkgs {
     let mut root_pkg = match relation_map.get("__root__") {
         Some(rel) => {
             let mut tmp: Vec<Pkgs> = Vec::new();
-            map2vec(&mut tmp, &rel.packages);
+            map2vec(&mut tmp, &merge_map(&rel.dependencies, &rel.devDependencies));
             Pkgs {
                 name: Some("__root__".to_owned()),
                 version: rel.version.to_owned(),
