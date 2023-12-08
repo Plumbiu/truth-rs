@@ -20,15 +20,14 @@ pub fn gen_graph(relations: &RelationsMap) -> Graph {
                 graph.links.push(GraphLink {
                     source: source.to_owned(),
                     target: target.to_owned(),
-                    value: source.to_owned(),
                 })
             }
         }
     }
     for id in nodes_set {
         graph.nodes.push(GraphNode {
-            id: id.clone(),
-            label: id,
+            name: id.clone(),
+            value: id,
         })
     }
     graph

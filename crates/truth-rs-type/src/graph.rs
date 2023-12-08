@@ -2,15 +2,14 @@ use serde::Serialize;
 
 #[derive(Serialize)]
 pub struct GraphNode {
-    pub id: String,
-    pub label: String,
+    pub name: String,
+    pub value: String,
 }
 
 #[derive(Serialize)]
 pub struct GraphLink {
     pub source: String,
     pub target: String,
-    pub value: String,
 }
 
 #[derive(Serialize)]
