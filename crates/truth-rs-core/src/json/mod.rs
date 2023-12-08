@@ -1,15 +1,14 @@
-use std::{collections::HashSet, fs, path::PathBuf, vec};
+use crate::util::merge_map;
+use std::collections::HashSet;
 use truth_rs_type::{json::Pkgs, AHashMap, AHashSet, RelationsMap};
 
-use crate::{gen_relations, util::merge_map};
-
-fn map2vec(v: &mut Vec<Pkgs>, m: &Option<AHashMap>) {
+fn insert_json(v: &mut Vec<Pkgs>, m: &Option<AHashMap>) {
     if let Some(map) = m {
         for (name, version) in map.iter() {
             v.push(Pkgs {
                 name: name.to_owned(),
                 version: version.to_owned(),
-                packages: vec![],
+                packages: Vec::default(),
             })
         }
     }
@@ -32,7 +31,7 @@ fn do_gen_json(
             let packages = &mut item.packages;
             if let None = tree_set.get(name) {
                 tree_set.insert(name.to_owned());
-                map2vec(
+                insert_json(
                     packages,
                     &merge_map(&rel.dependencies, &rel.devDependencies),
                 );
@@ -48,7 +47,7 @@ pub fn gen_json(depth: u16, relation_map: &RelationsMap) -> Pkgs {
     let mut root_pkg = match relation_map.get("__root__") {
         Some(rel) => {
             let mut tmp: Vec<Pkgs> = Vec::new();
-            map2vec(
+            insert_json(
                 &mut tmp,
                 &merge_map(&rel.dependencies, &rel.devDependencies),
             );
@@ -71,9 +70,6 @@ pub fn gen_json(depth: u16, relation_map: &RelationsMap) -> Pkgs {
     root_pkg
 }
 
-pub fn write_json(depth: u16, write_path: &PathBuf) {
-    let _ = fs::write(
-        write_path,
-        serde_json::to_string(&gen_json(depth, &gen_relations())).unwrap(),
-    );
+pub fn stringify_json(relations: &RelationsMap, depth: u16) -> String {
+    serde_json::to_string(&gen_json(depth, relations)).unwrap()
 }

@@ -1,8 +1,12 @@
-use crate::{gen_relations, util::merge_map};
-use std::{collections::HashSet, fs, path::PathBuf};
+use crate::util::merge_map;
+use std::collections::HashSet;
 use truth_rs_type::{tree::Tree, AHashMap, RelationsMap};
 
-fn map2vec(v: &mut Vec<Tree>, m: &Option<AHashMap>, set: &mut HashSet<String, ahash::RandomState>) {
+fn insert_tree(
+    v: &mut Vec<Tree>,
+    m: &Option<AHashMap>,
+    set: &mut HashSet<String, ahash::RandomState>,
+) {
     if let Some(map) = m {
         for (id, version) in map.iter() {
             let mut uid = id.to_owned();
@@ -37,7 +41,7 @@ fn do_gen_tree(
             if let None = tree_set.get(&rel.name) {
                 let packages = &mut item.children;
                 tree_set.insert(id.to_owned());
-                map2vec(
+                insert_tree(
                     packages,
                     &merge_map(&rel.dependencies, &rel.devDependencies),
                     set,
@@ -54,7 +58,7 @@ pub fn gen_tree(depth: u16, relation_map: &RelationsMap) -> Tree {
     let mut root_pkg = match relation_map.get("__root__") {
         Some(rel) => {
             let mut tmp: Vec<Tree> = Vec::new();
-            map2vec(
+            insert_tree(
                 &mut tmp,
                 &merge_map(&rel.dependencies, &rel.devDependencies),
                 &mut set,
@@ -73,9 +77,6 @@ pub fn gen_tree(depth: u16, relation_map: &RelationsMap) -> Tree {
     root_pkg
 }
 
-pub fn write_tree(depth: u16, write_path: &PathBuf) {
-    let _ = fs::write(
-        write_path.join("tree.json"),
-        serde_json::to_string(&gen_tree(depth, &gen_relations())).unwrap(),
-    );
+pub fn stringify_tree(relations: &RelationsMap, depth: u16) -> String {
+    serde_json::to_string(&gen_tree(depth, relations)).unwrap()
 }

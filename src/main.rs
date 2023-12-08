@@ -1,10 +1,8 @@
 use clap::{Parser, Subcommand};
 use mimalloc::MiMalloc;
-use std::{path::Path, time::Instant};
+use std::{fs, time::Instant};
 use truth_rs_constants::log_url;
-use truth_rs_core::{
-    gen_relations, graph::write_graph, json::write_json, tree::write_tree, write_relation,
-};
+use truth_rs_core::{json::stringify_json, relation::gen_relations};
 use truth_rs_server::start_server;
 
 #[global_allocator]
@@ -47,15 +45,14 @@ enum Commands {
         #[arg(long, short = 'D', default_value_t = 3)]
         depth: u16,
     },
-    Dev {},
 }
 
 fn main() {
+    let start = Instant::now();
     let args = Cli::parse();
+    let relations = gen_relations();
     match args.command {
         Commands::Web { port } => {
-            let start = Instant::now();
-            let relations = gen_relations();
             log_url(
                 &format!("http://localhost:{port}"),
                 start.elapsed().as_millis(),
@@ -63,9 +60,9 @@ fn main() {
             let _ = start_server(port, relations);
         }
         Commands::Json { depth } => {
-            let start = Instant::now();
             let write_path = "pkgs.json";
-            write_json(depth, &Path::new(write_path).to_path_buf());
+            let relations = gen_relations();
+            let _ = fs::write(write_path, stringify_json(&relations, depth));
             log_url(write_path, start.elapsed().as_millis());
         }
         Commands::Html { depth } => {
@@ -73,12 +70,6 @@ fn main() {
         }
         Commands::Txt { depth } => {
             println!("Cloning {depth}");
-        }
-        Commands::Dev {} => {
-            let write_path = Path::new("packages").join("web").join("public");
-            write_graph(&write_path);
-            write_relation(&write_path);
-            write_tree(4, &write_path);
         }
     }
 }

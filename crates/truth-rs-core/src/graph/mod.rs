@@ -1,16 +1,15 @@
+use crate::util::merge_map;
 use ahash::RandomState;
-use std::{collections::HashSet, fs, path::PathBuf, vec};
+use std::collections::HashSet;
 use truth_rs_type::{
     graph::{Graph, GraphLink, GraphNode},
     RelationsMap,
 };
 
-use crate::{gen_relations, util::merge_map};
-
 pub fn gen_graph(relations: &RelationsMap) -> Graph {
     let mut graph = Graph {
-        nodes: vec![],
-        links: vec![],
+        nodes: Vec::default(),
+        links: Vec::default(),
     };
     let mut nodes_set: HashSet<String, RandomState> = HashSet::default();
     for (source, rel) in relations {
@@ -35,9 +34,6 @@ pub fn gen_graph(relations: &RelationsMap) -> Graph {
     graph
 }
 
-pub fn write_graph(write_path: &PathBuf) {
-    let _ = fs::write(
-        write_path.join("graph.json"),
-        serde_json::to_string(&gen_graph(&gen_relations())).unwrap(),
-    );
+pub fn stringify_graph(relations: &RelationsMap) -> String {
+    serde_json::to_string(&gen_graph(relations)).unwrap()
 }
