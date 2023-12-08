@@ -18,28 +18,28 @@ struct Cli {
 #[derive(Debug, Subcommand)]
 enum Commands {
     /// [WEB] start web server
-    #[command(arg_required_else_help = true)]
     Web {
         /// server listen port
-        #[arg(long, short = 'P', default_value_t = 303)]
+        #[arg(long, short = 'P', default_value_t = 8080)]
         port: u16,
+        #[arg(long)]
+        dev: bool,
     },
     /// [FILE] generate `json` file
-    #[command(arg_required_else_help = true)]
     Json {
         /// npm package depth
         #[arg(long, short = 'D', default_value_t = 3)]
         depth: u16,
+        #[arg(long)]
+        dev: bool,
     },
     /// [FILE] generate `html` file
-    #[command(arg_required_else_help = true)]
     Html {
         /// npm package depth
         #[arg(long, short = 'D', default_value_t = 3)]
         depth: u16,
     },
     /// [FILE] generate `txt` file
-    #[command(arg_required_else_help = true)]
     Txt {
         /// npm package depth
         #[arg(long, short = 'D', default_value_t = 3)]
@@ -50,18 +50,18 @@ enum Commands {
 fn main() {
     let start = Instant::now();
     let args = Cli::parse();
-    let relations = gen_relations();
     match args.command {
-        Commands::Web { port } => {
+        Commands::Web { port, dev } => {
+            let relations = gen_relations(dev);
             log_url(
                 &format!("http://localhost:{port}"),
                 start.elapsed().as_millis(),
             );
             let _ = start_server(port, relations);
         }
-        Commands::Json { depth } => {
+        Commands::Json { depth, dev } => {
             let write_path = "pkgs.json";
-            let relations = gen_relations();
+            let relations = gen_relations(dev);
             let _ = fs::write(write_path, stringify_json(&relations, depth));
             log_url(write_path, start.elapsed().as_millis());
         }
