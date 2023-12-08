@@ -41,7 +41,7 @@ async function resolveDev() {
       execSync('pnpm -F web run dev')
       process.exit()
     } catch (err) {
-      if (retry > 20) {
+      if (retry > 50) {
         console.log(colors.red('Faild!'))
         process.exit()
       }
@@ -50,7 +50,7 @@ async function resolveDev() {
       }
     }
   }, 1000)
-  exec('cargo run -- web')
+  exec('cargo watch -x \'run -- web\'')
 }
 
 resolveDev()
