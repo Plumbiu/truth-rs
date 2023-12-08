@@ -16,7 +16,7 @@ fn insert_json(v: &mut Vec<Pkgs>, m: &Option<AHashMap>) {
 
 fn do_gen_json(
     root: &mut Vec<Pkgs>,
-    max_dep: u16,
+    max_dep: u8,
     relation_map: &RelationsMap,
     tree_set: &mut AHashSet,
     deep_optimize: bool,
@@ -42,7 +42,7 @@ fn do_gen_json(
     }
 }
 
-pub fn gen_json(depth: u16, relation_map: &RelationsMap) -> Pkgs {
+pub fn gen_json(depth: u8, relation_map: &RelationsMap) -> Pkgs {
     let mut tree_set: AHashSet = HashSet::default();
     let mut root_pkg = match relation_map.get("__root__") {
         Some(rel) => {
@@ -70,6 +70,6 @@ pub fn gen_json(depth: u16, relation_map: &RelationsMap) -> Pkgs {
     root_pkg
 }
 
-pub fn stringify_json(relations: &RelationsMap, depth: u16) -> String {
+pub fn stringify_json(relations: &RelationsMap, depth: u8) -> String {
     serde_json::to_string(&gen_json(depth, relations)).unwrap()
 }

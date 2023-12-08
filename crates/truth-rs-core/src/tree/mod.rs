@@ -8,7 +8,7 @@ fn insert_tree(
     set: &mut HashSet<String, ahash::RandomState>,
 ) {
     if let Some(map) = m {
-        for (id, version) in map.iter() {
+        for (id, version) in map {
             let mut uid = id.to_owned();
             while let Some(_id) = set.get(&uid) {
                 uid = uid + "_";
@@ -26,7 +26,7 @@ fn insert_tree(
 
 fn do_gen_tree(
     root: &mut Vec<Tree>,
-    max_dep: u16,
+    max_dep: u8,
     relation_map: &RelationsMap,
     set: &mut HashSet<String, ahash::RandomState>,
 ) {
@@ -53,7 +53,7 @@ fn do_gen_tree(
     }
 }
 
-pub fn gen_tree(depth: u16, relation_map: &RelationsMap) -> Tree {
+pub fn gen_tree(depth: u8, relation_map: &RelationsMap) -> Tree {
     let mut set: HashSet<String, ahash::RandomState> = HashSet::default();
     let mut root_pkg = match relation_map.get("__root__") {
         Some(rel) => {
@@ -77,6 +77,6 @@ pub fn gen_tree(depth: u16, relation_map: &RelationsMap) -> Tree {
     root_pkg
 }
 
-pub fn stringify_tree(relations: &RelationsMap, depth: u16) -> String {
+pub fn stringify_tree(relations: &RelationsMap, depth: u8) -> String {
     serde_json::to_string(&gen_tree(depth, relations)).unwrap()
 }

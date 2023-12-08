@@ -2,7 +2,7 @@ use clap::{Parser, Subcommand};
 use mimalloc::MiMalloc;
 use std::{fs, time::Instant};
 use truth_rs_constants::log_url;
-use truth_rs_core::{json::stringify_json, relation::gen_relations};
+use truth_rs_core::{json::stringify_json, relation::gen_relations, txt::gen_txt};
 use truth_rs_server::start_server;
 
 #[global_allocator]
@@ -29,7 +29,7 @@ enum Commands {
     Json {
         /// npm package depth
         #[arg(long, short = 'D', default_value_t = 3)]
-        depth: u16,
+        depth: u8,
         #[arg(long)]
         dev: bool,
     },
@@ -37,13 +37,17 @@ enum Commands {
     Html {
         /// npm package depth
         #[arg(long, short = 'D', default_value_t = 3)]
-        depth: u16,
+        depth: u8,
+        #[arg(long)]
+        dev: bool,
     },
     /// [FILE] generate `txt` file
     Txt {
         /// npm package depth
         #[arg(long, short = 'D', default_value_t = 3)]
-        depth: u16,
+        depth: u8,
+        #[arg(long)]
+        dev: bool,
     },
 }
 
@@ -65,11 +69,17 @@ fn main() {
             let _ = fs::write(write_path, stringify_json(&relations, depth));
             log_url(write_path, start.elapsed().as_millis());
         }
-        Commands::Html { depth } => {
-            println!("Cloning {depth}");
+        Commands::Html { depth, dev } => {
+            let write_path = "pkgs.txt";
+            let relations = gen_relations(dev);
+            let _ = fs::write(write_path, gen_txt(&relations, depth));
+            log_url(write_path, start.elapsed().as_millis());
         }
-        Commands::Txt { depth } => {
-            println!("Cloning {depth}");
+        Commands::Txt { depth, dev } => {
+            let write_path = "pkgs.txt";
+            let relations = gen_relations(dev);
+            let _ = fs::write(write_path, gen_txt(&relations, depth));
+            log_url(write_path, start.elapsed().as_millis());
         }
     }
 }
