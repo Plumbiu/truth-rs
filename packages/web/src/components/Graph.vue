@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { IG6GraphEvent, Graph } from '@antv/g6';
 import { onMounted } from 'vue';
+import { request } from '../utils';
 
 onMounted(async () => {
   const container = document.getElementById('container')!;
@@ -29,7 +30,7 @@ onMounted(async () => {
       }]
     },
   });
-  const data = await fetch('/graph.json').then(res => res.json())
+  const data = await request('graph.json')
   graph.data({
     nodes: data.nodes,
     edges: data.links,
@@ -67,7 +68,6 @@ onMounted(async () => {
     model.fx = e.x;
     model.fy = e.y;
   }
-
 })
 
 </script>

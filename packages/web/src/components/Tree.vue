@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { TreeGraph } from '@antv/g6';
-import { onMounted } from 'vue';
+import { TreeGraph } from '@antv/g6'
+import { onMounted } from 'vue'
+import { request } from '../utils/index'
 
 onMounted(async () => {
-  const container = document.getElementById('tree')!;
-  const width = container.scrollWidth;
-  const height = container.scrollHeight || 500;
+  const container = document.getElementById('tree')!
+  const width = container.scrollWidth
+  const height = container.scrollHeight || 500
   const graph = new TreeGraph({
     container: 'tree',
     width,
@@ -14,13 +15,13 @@ onMounted(async () => {
       default: [
         {
           type: 'collapse-expand',
-          onChange: function onChange(item, collapsed) {
-            const data = item?.getModel();
+          onChange(item, collapsed) {
+            const data = item?.getModel()
             if (!data) {
               return
             }
-            data.collapsed = collapsed;
-            return true;
+            data.collapsed = collapsed
+            return true
           },
         },
         'drag-canvas',
@@ -40,46 +41,35 @@ onMounted(async () => {
     layout: {
       type: 'mindmap',
       direction: 'LR',
-      getId: function getId(d: { id: any; }) {
-        return d.id;
-      },
-      getHeight: function getHeight() {
-        return 16;
-      },
-      getWidth: function getWidth() {
-        return 16;
-      },
-      getVGap: function getVGap() {
-        return 10;
-      },
-      getHGap: function getHGap() {
-        return 100;
-      },
+      getId: (d: { id: any }) => d.id,
+      getHeight: () => 16,
+      getWidth: () => 16,
+      getVGap: () => 10,
+      getHGap: () => 100,
     },
-  });
+  })
 
-  graph.node(function (node) {
+  graph.node((node) => {
     return {
       label: node.id,
       labelCfg: {
         offset: 10,
         position: node.children && node.children.length > 0 ? 'left' : 'right',
       },
-    };
-  });
-  const data = await fetch('/tree.json').then(res => res.json())
+    }
+  })
+  const data = await request('tree.json')
 
-  graph.data(data);
-  graph.render();
-  graph.fitView();
+  graph.data(data)
+  graph.render()
+  graph.fitView()
 
   window.onresize = () => {
-    if (!graph || graph.get('destroyed')) return;
-    if (!container || !container.scrollWidth || !container.scrollHeight) return;
-    graph.changeSize(container.scrollWidth, container.scrollHeight);
+    if (!graph || graph.get('destroyed')) return
+    if (!container || !container.scrollWidth || !container.scrollHeight) return
+    graph.changeSize(container.scrollWidth, container.scrollHeight)
   }
 })
-
 </script>
 
 <template>

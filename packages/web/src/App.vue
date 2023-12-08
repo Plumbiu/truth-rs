@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import Graph from './components/Graph.vue'
-import Tree from './components/Tree.vue'
-let chart = ref('graph')
-
+import { ref } from 'vue'
+let chart = ref('/')
 </script>
 
 <template>
-  <button @click="chart = chart === 'graph' ? 'tree' : 'graph'">切换图表</button>
-  <component :is=" chart === 'graph' ? Graph : Tree" />
+  <RouterLink :to="chart" @click="chart = chart === '/' ? 'tree' : '/'">
+    切换图表
+  </RouterLink>
+  <RouterView />
 </template>
 
 <style>
