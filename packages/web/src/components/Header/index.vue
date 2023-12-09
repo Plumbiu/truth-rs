@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Aim, Download, Search } from '@element-plus/icons-vue'
 import { type Ref, inject } from 'vue'
-import type { Legend, PkgInfo } from '@truth-rs/types'
+import type { Legend, PkgInfo } from '../../types'
 import {
   changeGraphRoot,
   collapseNode,

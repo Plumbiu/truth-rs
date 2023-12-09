@@ -10,13 +10,22 @@ body {
     linear-gradient(90deg, var(--el-color-info-light-9) 1px, transparent 0);
   background-size: 30px 30px, 30px 30px;
 }
-/* 提示框的样式 */
-.g6-tooltip {
-  border: 1px solid #e2e2e2;
-  border-radius: 4px;
-  font-size: 1em;
-  color: #545454;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 10px 8px;
-  box-shadow: rgb(174, 174, 174) 0px 0px 10px;
+a {
+  text-decoration: none;
+  color: var(--el-color-primary);
+}
+.pkg {
+  cursor: pointer;
+  transition: background-color 0.05s;
+}
+.pkg:hover {
+  background-color: var(--el-color-primary-light-9);
+}
+.key {
+  font-weight: bold;
+}
+.value {
+  padding-left: 8px;
+  color: var(--el-color-success-dark-2);
+  line-height: 22px;
 }

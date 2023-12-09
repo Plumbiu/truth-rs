@@ -2,7 +2,7 @@
 import { type Ref, inject, ref } from 'vue'
 import { ArrowDown } from '@element-plus/icons-vue'
 import { getPkgInfo } from '../../utils/index'
-import type { PkgInfo, ShowType } from '@truth-rs/types'
+import type { PkgInfo, ShowType } from '../../types'
 
 const pkgName = inject<Ref<string>>('pkgName')!
 const pkgInfo = inject<Ref<PkgInfo>>('pkgInfo')!

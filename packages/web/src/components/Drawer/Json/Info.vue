@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Relation } from '@truth-cli/shared'
+import type { Relation } from '../../../types'
 
 defineProps<{
   data: Relation
@@ -12,8 +12,13 @@ defineProps<{
       <div class="key">
         {{ key }}
       </div>
-      <div v-for="(version, name) in value" :key="name" class="pkg" style="padding-left: 16px;">
-        <div style="line-height: 22px;">
+      <div
+        v-for="(version, name) in value"
+        :key="name"
+        class="pkg"
+        style="padding-left: 16px"
+      >
+        <div style="line-height: 22px">
           <span>- {{ name }}</span>
           <span class="value">{{ version }}</span>
         </div>
@@ -21,7 +26,14 @@ defineProps<{
     </div>
     <div v-else>
       <span class="key">{{ key }}</span>
-      <a v-if="key === 'homepage' || key === 'path'" :href="String(value)" target="_blank" style="padding-left: 8px;">{{ value }}</a>
+      <a
+        v-if="key === 'homepage' || key === 'path'"
+        :href="String(value)"
+        target="_blank"
+        style="padding-left: 8px"
+      >
+        {{ value }}
+      </a>
       <span v-else class="value">{{ value }}</span>
     </div>
   </div>

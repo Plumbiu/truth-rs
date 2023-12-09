@@ -1,4 +1,4 @@
-import type { Links, Nodes, Tree } from '@truth-rs/types'
+import type { Links, Nodes, Tree } from '../types'
 import { formatName, request } from './index'
 
 export function loadTree(tree: Tree) {
@@ -109,13 +109,11 @@ export async function genGraph({ name, category, target }: GraphQuery) {
     .filter(([_, val]) => val)
     .map((item) => item.join('='))
     .join('&')
-  console.log(params)
 
   const graph = await request<{
     nodes: Nodes[]
     links: Links[]
   }>(`graph.json?${params}`)
-  console.log(graph)
 
   return graph as {
     nodes: Nodes[]

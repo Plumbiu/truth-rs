@@ -6,8 +6,8 @@ import type {
   Nodes,
   Relations,
   Tree,
-} from '@truth-rs/types'
-import { loadGraph, loadTree, genGraph } from './tools'
+} from '../types'
+import { loadGraph, loadTree, genGraph, isEmptyObj } from './tools'
 
 const apiUrl = import.meta.env.DEV ? 'http://localhost:8080/api/' : '/api/'
 
@@ -31,7 +31,7 @@ let tree: Tree
 // let versions: Versions
 // let circulation: Record<string, string[]>
 
-export async function initChart(_echart: ECharts, _relation: Relations) {
+export async function initChart(_echart: ECharts) {
   const { nodes, links } = await genGraph({ name: '__root__', category: 1 })
   relations = await request('relations.json')
   _echart.setOption(loadGraph((graphNodes = nodes), (graphLinks = links)))
@@ -79,7 +79,9 @@ export async function dealGraphNode(name: string) {
     graphNodes = graphNodes.filter(
       ({ name: _name }) =>
         // eslint-disable-next-line @stylistic/implicit-arrow-linebreak
-        !nodeHad.has(_name) || linkHad.get(_name)!.size > 1 || _name === name,
+        !nodeHad.has(_name) ||
+        (linkHad.get(_name)?.size ?? 0 > 1) ||
+        _name === name,
     )
   } else {
     nodesSet.add(name)
@@ -95,31 +97,31 @@ export async function dealGraphNode(name: string) {
 }
 
 export function dealTreeNode(data: any, collapsed: boolean, ancestors?: any) {
-  // if (collapsed) {
-  //   const node = treeNodeMap.get(data.name)
-  //   node && (node.collapsed = true)
-  //   treeNodeMap.delete(data.name)
-  //   return
-  // }
-  // const { dependencies = {}, devDependencies } =
-  //   relations[formatName(data.name)] ?? {}
-  // const pkg = Object.assign(dependencies, devDependencies)
-  // if (isEmptyObj(pkg) || data.children.length) return
-  // let child = tree.children
-  // for (let i = 2; i < ancestors.length; i++) {
-  //   const item = child.find((item) => item.name === ancestors[i].name)!
-  //   item.collapsed = false
-  //   treeNodeMap.set(item.name, item)
-  //   child = item.children
-  // }
-  // child.push(
-  //   ...Object.entries(pkg).map(([name, value]) => ({
-  //     // echarts 对相同名字的标签会动画重叠，这里用 -- 区分一下
-  //     name: `${name}--${data.name}`,
-  //     value,
-  //     children: [],
-  //   })),
-  // )
+  if (collapsed) {
+    const node = treeNodeMap.get(data.name)
+    node && (node.collapsed = true)
+    treeNodeMap.delete(data.name)
+    return
+  }
+  const { dependencies = {}, devDependencies } =
+    relations[formatName(data.name)] ?? {}
+  const pkg = Object.assign(dependencies, devDependencies)
+  if (isEmptyObj(pkg) || data.children.length) return
+  let child = tree.children
+  for (let i = 2; i < ancestors.length; i++) {
+    const item = child.find((item) => item.name === ancestors[i].name)!
+    item.collapsed = false
+    treeNodeMap.set(item.name, item)
+    child = item.children
+  }
+  child.push(
+    ...Object.entries(pkg).map(([name, value]) => ({
+      // echarts 对相同名字的标签会动画重叠，这里用 -- 区分一下
+      name: `${name}--${data.name}`,
+      value,
+      children: [],
+    })),
+  )
   resetChart({ tree })
 }
 
@@ -130,14 +132,13 @@ export function toggleChart(legend: Legend) {
 }
 
 export function getPkgInfo(name: string): PkgInfo {
-  // return {
-  //   info:
-  //     relations[name] ??
-  //     Object.values(relations).find((val) => val.name?.includes(name)),
-  //   extra: relations.__extra__[name],
-  //   circulation: circulation[name],
-  //   versions: versions[name],
-  // }
+  console.log(relations[name])
+
+  return {
+    info:
+      relations[name] ??
+      Object.values(relations).find((val) => val.name?.includes(name)),
+  }
 }
 
 function resetChart(data: { tree?: Tree; nodes?: Nodes[]; links?: Links[] }) {
