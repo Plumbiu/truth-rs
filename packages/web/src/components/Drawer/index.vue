@@ -2,22 +2,14 @@
 import { type Ref, inject, ref } from 'vue'
 import { ArrowDown } from '@element-plus/icons-vue'
 import { getPkgInfo } from '../../utils/index'
-import type { PkgInfo, ShowType } from '../../types'
+import type { Relation, ShowType } from '../../types'
 
 const pkgName = inject<Ref<string>>('pkgName')!
-const pkgInfo = inject<Ref<PkgInfo>>('pkgInfo')!
+const pkgInfo = inject<Ref<Relation>>('pkgInfo')!
 const drawer = inject<Ref<boolean>>('drawer')
 const type = ref<ShowType>('info')
 
-const infoMap: Record<string, string> = {
-  info: '依赖信息',
-  circulation: '循环依赖',
-  versions: '版本引用',
-  extra: '其他版本',
-}
-
-function handlePkgInfo(command: ShowType) {
-  type.value = command
+function handlePkgInfo() {
   pkgInfo.value = getPkgInfo(pkgName.value)
 }
 </script>
@@ -34,30 +26,19 @@ function handlePkgInfo(command: ShowType) {
           </div>
           <ElDropdown trigger="click" @command="handlePkgInfo">
             <ElButton>
-              {{ infoMap[type] }}
+              依赖信息
               <ElIcon title="查看依赖信息" class="el-icon--right">
                 <ArrowDown />
               </ElIcon>
             </ElButton>
             <template #dropdown>
-              <ElDropdownMenu>
-                <ElDropdownItem
-                  v-for="(value, key) in infoMap"
-                  :key="value"
-                  :command="key"
-                >
-                  {{ value }}
-                </ElDropdownItem>
-                <ElDropdownItem>
-                  <ElButton
-                    tag="a"
-                    target="_blank"
-                    :href="`https://npmjs.com/package/${pkgName}`"
-                  >
-                    NPM
-                  </ElButton>
-                </ElDropdownItem>
-              </ElDropdownMenu>
+              <ElButton
+                tag="a"
+                target="_blank"
+                :href="`https://npmjs.com/package/${pkgName}`"
+              >
+                NPM
+              </ElButton>
             </template>
           </ElDropdown>
         </div>
@@ -68,10 +49,10 @@ function handlePkgInfo(command: ShowType) {
             line-height: 26px;
           "
         >
-          <div v-if="pkgInfo[type]">
-            <Json :data="pkgInfo[type]" :type="type" />
+          <div v-if="pkgInfo">
+            <Json :data="pkgInfo" :type="type" />
           </div>
-          <div v-else class="value">未找到{{ infoMap[type] }}信息</div>
+          <div v-else class="value">未找到依赖信息</div>
         </ElScrollbar>
       </ElScrollbar>
     </div>

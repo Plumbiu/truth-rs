@@ -1,12 +1,5 @@
 import type { ECharts } from 'echarts/core'
-import type {
-  Legend,
-  PkgInfo,
-  Links,
-  Nodes,
-  Relations,
-  Tree,
-} from '../types'
+import type { Legend, Links, Nodes, Relation, Relations, Tree } from '../types'
 import { loadGraph, loadTree, genGraph, isEmptyObj } from './tools'
 
 const apiUrl = import.meta.env.DEV ? 'http://localhost:8080/api/' : '/api/'
@@ -44,15 +37,15 @@ export async function changeGraphRoot(name: string, isAim: boolean) {
     resetChart({ nodes: graphNodes, links: graphLinks })
     return
   }
-  const newNodes = [{ name, category: 2, value: relations[name].version! }]
-  const { nodes, links } = await genGraph({ name })
+  const newNodes = [{ name, category: 0, value: relations[name].version! }]
+  const { nodes, links } = await genGraph({ name, category: 2 })
   newNodes.push(...nodes.filter((node) => node.name !== name))
   resetChart({ nodes: newNodes, links })
 }
 
 export async function collapseNode(legend: Legend) {
   if (legend === 'Graph') {
-    const { nodes, links } = await genGraph({ name: '__root__' })
+    const { nodes, links } = await genGraph({ name: '__root__', category: 1 })
     resetChart({ nodes: (graphNodes = nodes), links: (graphLinks = links) })
     nodesSet.clear()
     return
@@ -131,14 +124,11 @@ export function toggleChart(legend: Legend) {
   return isGraph ? 'Tree' : 'Graph'
 }
 
-export function getPkgInfo(name: string): PkgInfo {
-  console.log(relations[name])
-
-  return {
-    info:
-      relations[name] ??
-      Object.values(relations).find((val) => val.name?.includes(name)),
-  }
+export function getPkgInfo(name: string): Relation {
+  return (
+    relations[name] ??
+    Object.values(relations).find((val) => val.name?.includes(name))
+  )
 }
 
 function resetChart(data: { tree?: Tree; nodes?: Nodes[]; links?: Links[] }) {

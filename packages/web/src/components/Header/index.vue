@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Aim, Download, Search } from '@element-plus/icons-vue'
 import { type Ref, inject } from 'vue'
-import type { Legend, PkgInfo } from '../../types'
+import type { Legend, Relation } from '../../types'
 import {
   changeGraphRoot,
   collapseNode,
@@ -11,7 +11,7 @@ import {
 } from '../../utils/'
 
 const pkgName = inject<Ref<string>>('pkgName')!
-const pkgInfo = inject<Ref<PkgInfo>>('pkgInfo')!
+const pkgInfo = inject<Ref<Relation>>('pkgInfo')!
 const drawer = inject<Ref<boolean>>('drawer')!
 const isAim = inject<Ref<boolean>>('isAim')!
 let legend: Legend = 'Graph'

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, provide, ref } from 'vue'
-import type { PkgInfo, Relation } from '../../types'
+import type { Relation } from '../../types'
 import echarts from '../../plugins/echarts'
 import {
   dealGraphNode,
@@ -11,10 +11,8 @@ import {
 } from '../../utils/index'
 
 const relation: Relation = await request('relations.json/__root__')
-console.log({ relation })
-
 const pkgName = ref(relation.name ?? '__root__')
-const pkgInfo = ref<PkgInfo>({ info: relation })
+const pkgInfo = ref<Relation>(relation)
 const isAim = ref(false)
 const drawer = ref(false)
 
