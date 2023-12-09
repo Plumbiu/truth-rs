@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "cargo watch -x 'run -- web'"
+    "dev": "cargo watch -x 'run -- web --dev'"
   },
   "keywords": [],
   "author": "Plumbiu",
