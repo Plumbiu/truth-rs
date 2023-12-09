@@ -50,7 +50,7 @@ const handleSearch = debounce(() => {
       target="_blank"
       class="left"
     >
-      TRUTH-CLI
+      TRUTH-RS
     </a>
     <div class="right">
       <ElButton :icon="Download" title="下载图片" @click="download" />
