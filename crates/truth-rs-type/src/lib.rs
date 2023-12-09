@@ -3,6 +3,7 @@ pub mod graph;
 pub mod json;
 pub mod package;
 pub mod tree;
+pub mod graph_server;
 
 use ahash::RandomState;
 use serde::{Deserialize, Serialize};

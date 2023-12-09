@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "esno scripts/dev.ts"
+    "dev": "cargo watch -x 'run -- web'"
   },
   "keywords": [],
   "author": "Plumbiu",

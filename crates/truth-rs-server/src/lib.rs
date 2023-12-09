@@ -5,8 +5,8 @@ mod tree;
 use actix_web::{get, web, App, HttpResponse, HttpServer, Responder};
 use graph::{graph_json, graph_name_json};
 use relation::{relations_json, relations_name_json};
-use tree::tree_json;
 use std::fs;
+use tree::tree_json;
 use truth_rs_type::RelationsMap;
 
 pub struct AppState {
@@ -33,8 +33,8 @@ pub async fn start_server(port: u16, relations: RelationsMap) -> std::io::Result
                     .service(index)
                     .service(relations_json)
                     .service(relations_name_json)
-                    .service(graph_name_json)
                     .service(graph_json)
+                    .service(graph_name_json)
                     .service(tree_json),
             )
     })

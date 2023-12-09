@@ -76,7 +76,7 @@ export function loadGraph(nodes: Nodes[], links: Links[]) {
       links,
       edgeSymbol: ['arrow', 'none'],
       edgeSymbolSize: 8,
-      categories: [{ name: '依赖' }, { name: '项目依赖' }, { name: '项目名' }],
+      categories: [{ name: '依赖' }, { name: '项目依赖' }],
       cursor: 'pointer',
       symbolSize: 28,
       label: {
@@ -97,11 +97,24 @@ export function isEmptyObj(obj: Object) {
   return Object.keys(obj).length === 0
 }
 
-export async function genGraph(name: string) {
+interface GraphQuery {
+  name: string
+  category?: number
+  target?: string
+}
+
+export async function genGraph({ name, category, target }: GraphQuery) {
+  const queryObj = { name, category, target }
+  const params = Object.entries(queryObj)
+    .filter(([_, val]) => val)
+    .map((item) => item.join('='))
+    .join('&')
+  console.log(params)
+
   const graph = await request<{
     nodes: Nodes[]
     links: Links[]
-  }>(`graph.json/${name}`)
+  }>(`graph.json?${params}`)
   console.log(graph)
 
   return graph as {

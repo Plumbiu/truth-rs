@@ -4,6 +4,7 @@ use serde::Serialize;
 pub struct GraphNode {
     pub name: String,
     pub value: String,
+    pub category: u8,
 }
 
 #[derive(Serialize)]

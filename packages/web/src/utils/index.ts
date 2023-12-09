@@ -7,7 +7,6 @@ import type {
   Relations,
   Tree,
 } from '@truth-rs/types'
-// eslint-disable-next-line import/default
 import { loadGraph, loadTree, genGraph } from './tools'
 
 const apiUrl = import.meta.env.DEV ? 'http://localhost:8080/api/' : '/api/'
@@ -33,7 +32,7 @@ let tree: Tree
 // let circulation: Record<string, string[]>
 
 export async function initChart(_echart: ECharts, _relation: Relations) {
-  const { nodes, links } = await genGraph('__root__')
+  const { nodes, links } = await genGraph({ name: '__root__', category: 1 })
   relations = await request('relations.json')
   _echart.setOption(loadGraph((graphNodes = nodes), (graphLinks = links)))
   echart = _echart
@@ -46,14 +45,14 @@ export async function changeGraphRoot(name: string, isAim: boolean) {
     return
   }
   const newNodes = [{ name, category: 2, value: relations[name].version! }]
-  const { nodes, links } = await genGraph(name)
+  const { nodes, links } = await genGraph({ name })
   newNodes.push(...nodes.filter((node) => node.name !== name))
   resetChart({ nodes: newNodes, links })
 }
 
 export async function collapseNode(legend: Legend) {
   if (legend === 'Graph') {
-    const { nodes, links } = await genGraph('__root__')
+    const { nodes, links } = await genGraph({ name: '__root__' })
     resetChart({ nodes: (graphNodes = nodes), links: (graphLinks = links) })
     nodesSet.clear()
     return
@@ -65,7 +64,7 @@ export async function collapseNode(legend: Legend) {
 
 export async function dealGraphNode(name: string) {
   if (name === '__root__' || !relations[name]) return
-  const { nodes, links } = await genGraph(name)
+  const { nodes, links } = await genGraph({ name })
   if (!nodes.length) return
   const linkHad = new Map<string, Set<string>>()
   for (let i = 0; i < graphLinks.length; i++) {
