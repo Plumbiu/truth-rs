@@ -11,5 +11,5 @@ actix-web = { version = "4.4.0", default-features = false, features = [
 ] }
 actix-cors = "0.6.4"
 truth-rs-core = { path = "../truth-rs-core" }
-serde_json = "1.0.108"
+simd-json = "0.13.4"
 truth-rs-type = { path = "../truth-rs-type" }

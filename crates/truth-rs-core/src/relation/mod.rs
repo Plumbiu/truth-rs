@@ -1,3 +1,4 @@
+use simd_json;
 use std::{
     collections::HashMap,
     fs,
@@ -11,32 +12,36 @@ fn insert_relations_one(
     name: Option<String>,
     include_dev: bool,
 ) {
-    let package_json_path = Path::join(dir, "package.json");
-    let pkg = fs::read(package_json_path).unwrap();
-    let pkg: Package = serde_json::from_slice(&pkg).unwrap();
-    relations.insert(
-        match name {
-            Some(t) => t,
-            None => pkg.name.to_owned(),
-        },
-        Relation {
-            name: pkg.name,
-            path: dir.as_os_str().to_os_string(),
-            version: pkg.version,
-            dependencies: pkg.dependencies,
-            devDependencies: match include_dev {
-                true => pkg.devDependencies,
-                _ => None,
-            },
-            homepage: pkg.homepage,
-        },
-    );
+    let package_json_path = dir.join("package.json");
+    let mut pkg = fs::read_to_string(package_json_path.clone()).unwrap();
+    let pkg: Package = unsafe { simd_json::serde::from_str(&mut pkg).unwrap() };
+    let mut relation = Relation {
+        name: pkg.name.to_owned(),
+        path: package_json_path.to_string_lossy().to_string(),
+        version: pkg.version,
+        dependencies: pkg.dependencies,
+        devDependencies: None,
+        homepage: pkg.homepage,
+    };
+
+    match name {
+        Some(t) => {
+            relation.devDependencies = pkg.devDependencies;
+            relations.insert(t, relation);
+        }
+        _ => {
+            if include_dev == true {
+                relation.dependencies = pkg.devDependencies;
+            }
+            relations.insert(pkg.name, relation);
+        }
+    };
 }
 
 fn insert_relations_many(
     relations: &mut RelationsMap,
     dir: &PathBuf,
-    name: Option<String>,
+    name: &Option<String>,
     include_dev: bool,
 ) {
     let dirs = fs::read_dir(&dir).unwrap();
@@ -58,7 +63,7 @@ fn insert_relations(relations: &mut RelationsMap, p: &Path, include_dev: bool) {
             if name.starts_with(".") {
                 continue;
             } else if name.starts_with("@") {
-                insert_relations_many(relations, &dir.path(), None, include_dev);
+                insert_relations_many(relations, &dir.path(), &None, include_dev);
             } else {
                 insert_relations_one(relations, &dir.path(), None, include_dev);
             }
@@ -86,5 +91,5 @@ pub fn gen_relations(include_dev: bool) -> RelationsMap {
 }
 
 pub fn stringify_relations(include_dev: bool) -> String {
-    serde_json::to_string(&gen_relations(include_dev)).unwrap()
+    simd_json::to_string(&gen_relations(include_dev)).unwrap()
 }

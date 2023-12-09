@@ -1,6 +1,6 @@
 use crate::AppState;
 use actix_web::{get, web, HttpResponse, Responder};
-use serde_json::to_string;
+use simd_json::to_string;
 use std::collections::HashMap;
 use truth_rs_core::graph::gen_graph;
 use truth_rs_type::{graph_server::GraphQuery, RelationsMap};

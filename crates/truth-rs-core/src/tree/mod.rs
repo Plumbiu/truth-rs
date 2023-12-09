@@ -78,5 +78,5 @@ pub fn gen_tree(depth: u8, relation_map: &RelationsMap) -> Tree {
 }
 
 pub fn stringify_tree(relations: &RelationsMap, depth: u8) -> String {
-    serde_json::to_string(&gen_tree(depth, relations)).unwrap()
+    simd_json::to_string(&gen_tree(depth, relations)).unwrap()
 }

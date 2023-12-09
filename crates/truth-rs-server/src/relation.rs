@@ -1,6 +1,6 @@
 use crate::AppState;
 use actix_web::{get, web, HttpResponse, Responder};
-use serde_json::to_string;
+use simd_json::to_string;
 
 #[get("/relations.json/{name}")]
 async fn relations_name_json(data: web::Data<AppState>, name: web::Path<String>) -> impl Responder {
