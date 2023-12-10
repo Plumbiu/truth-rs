@@ -56,7 +56,19 @@ jobs:
           else
             mv "target/${{ matrix.target }}/release/$binary_name" "$dirname"
           fi
-      - name: Push target
-        uses: ad-m/github-push-action@master
+          if [ "${{ matrix.os }}" = "windows-latest" ]; then
+            7z a "$dirname.zip" "$dirname"
+            echo "ASSET=$dirname.zip" >> $GITHUB_ENV
+          else
+            tar -czf "$dirname.tar.gz" "$dirname"
+            echo "ASSET=$dirname.tar.gz" >> $GITHUB_ENV
+          fi
+      - name: Upload the binaries
+        uses: softprops/action-gh-release@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          files: |
+            ${{ env.ASSET }}
+      # - name: Push target
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
