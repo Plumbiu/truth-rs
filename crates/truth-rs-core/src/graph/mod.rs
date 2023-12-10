@@ -11,7 +11,7 @@ pub fn gen_graph(relations: &RelationsMap, category: Option<u8>) -> Graph {
         links: Vec::default(),
     };
     let mut nodes_set: AHashMap = HashMap::default();
-    for (source, rel) in relations {
+    for (source, rel) in relations.iter() {
         nodes_set.insert(source.to_owned(), rel.version.to_owned());
         if let Some(deps) = &merge_map(&rel.dependencies, &rel.devDependencies) {
             for (target, version) in deps {
