@@ -9,11 +9,6 @@ export async function request<T>(rest: string) {
   return data as T
 }
 
-// export async function getPkgInfo(name: string) {
-//   const data = await request(`relations.jon/${name}`)
-//   return data
-// }
-
 let echart: ECharts
 const treeNodeMap = new Map()
 const nodesSet = new Set()
@@ -21,12 +16,11 @@ let relations: Relations
 let graphNodes: Nodes[]
 let graphLinks: Links[]
 let tree: Tree
-// let versions: Versions
-// let circulation: Record<string, string[]>
 
 export async function initChart(_echart: ECharts) {
   const { nodes, links } = await genGraph({ name: '__root__', category: 1 })
   relations = await request('relations.json')
+  tree = await request('tree.json')
   _echart.setOption(loadGraph((graphNodes = nodes), (graphLinks = links)))
   echart = _echart
 }
@@ -89,6 +83,7 @@ export async function dealGraphNode(name: string) {
   resetChart({ nodes: graphNodes, links: graphLinks })
 }
 
+// TODO: handle by rust
 export function dealTreeNode(data: any, collapsed: boolean, ancestors?: any) {
   if (collapsed) {
     const node = treeNodeMap.get(data.name)
