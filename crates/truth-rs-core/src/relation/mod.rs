@@ -79,7 +79,6 @@ pub fn gen_relations(include_dev: bool) -> RelationsMap {
         Some(String::from("__root__")),
         true,
     );
-    println!("{:?}", relations);
     insert_relations(&mut relations, Path::new("node_modules"), include_dev);
     if Path::exists(&Path::new("pnpm-lock.yaml")) {
         insert_relations(
