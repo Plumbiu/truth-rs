@@ -1,7 +1,15 @@
 {
-  "name": "truth-rs-monorepo",
+  "name": "truth-rs",
   "version": "1.0.0",
   "type": "module",
+  "main": "index.js",
+  "files": [
+    "bin",
+    "index.js"
+  ],
+  "bin": {
+    "truth-rs": "./index.js"
+  },
   "scripts": {
     "dev": "cargo watch -x 'run -- web --dev'",
     "dev:web": "pnpm -F web run dev"
