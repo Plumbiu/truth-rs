@@ -1,5 +1,6 @@
 {
   "name": "truth-rs",
+  "description": "npm packages analyzing tool, powered by rust",
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
@@ -14,7 +15,16 @@
     "dev": "cargo watch -x 'run -- web --dev'",
     "dev:web": "pnpm -F web run dev"
   },
-  "keywords": [],
+  "keywords": [
+    "node_moudles",
+    "cli",
+    "node",
+    "rust",
+    "npm",
+    "yarn",
+    "pnpm",
+    "bun"
+  ],
   "author": "Plumbiu",
   "license": "MIT",
   "devDependencies": {
