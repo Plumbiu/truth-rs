@@ -5,7 +5,7 @@ mod tree;
 use actix_web::{get, web, App, HttpResponse, HttpServer, Responder};
 use graph::{graph_json, graph_name_json};
 use relation::{relations_json, relations_name_json};
-use std::fs;
+use std::{env, fs};
 use tree::tree_json;
 use truth_rs_type::RelationsMap;
 
@@ -15,7 +15,8 @@ pub struct AppState {
 
 #[get("/")]
 async fn index() -> impl Responder {
-    let html = fs::read_to_string("dist/index.html").unwrap();
+    let html =
+        fs::read_to_string(env::current_exe().unwrap().join("../../../dist/index.html")).unwrap();
     HttpResponse::Ok().body(html)
 }
 
