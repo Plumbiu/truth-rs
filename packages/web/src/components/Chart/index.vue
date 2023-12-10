@@ -10,7 +10,7 @@ import {
   request,
 } from '../../utils/index'
 
-const relation: Relation = await request('relations.json/__root__')
+const relation: Relation = await request('relations.json/query?name=__root__')
 const pkgName = ref(relation.name ?? '__root__')
 const pkgInfo = ref<Relation>(relation)
 const isAim = ref(false)
@@ -24,10 +24,11 @@ provide('isAim', isAim)
 onMounted(async () => {
   const chartDOM = echarts.init(document.getElementById('chart'))
   await initChart(chartDOM)
-  chartDOM.on('click', (params: any) => {
+  // @ts-ignore
+  chartDOM.on('click', async (params: any) => {
     const { data, seriesType, collapsed, treeAncestors } = params
     pkgName.value = data.name
-    pkgInfo.value = getPkgInfo(pkgName.value)
+    pkgInfo.value = await getPkgInfo(pkgName.value)
     if (seriesType === 'tree') {
       dealTreeNode(data, collapsed, treeAncestors)
     } else if (!isAim.value) {

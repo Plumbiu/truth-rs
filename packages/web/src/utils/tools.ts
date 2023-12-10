@@ -19,7 +19,7 @@ export function loadTree(tree: Tree) {
       tooltip: {
         formatter: (params: any) => {
           const name = formatName(params.name)
-          const value = params.value
+          const value = params.data.version
           return `${name} ${value}`
         },
       },

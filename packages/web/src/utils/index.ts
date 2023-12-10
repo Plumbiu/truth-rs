@@ -102,10 +102,11 @@ export function dealTreeNode(data: any, collapsed: boolean, ancestors?: any) {
     treeNodeMap.set(item.name, item)
     child = item.children
   }
+
   child.push(
-    ...Object.entries(pkg).map(([name, value]) => ({
+    ...Object.values(pkg).map((value) => ({
       // echarts 对相同名字的标签会动画重叠，这里用 -- 区分一下
-      name: `${name}--${data.name}`,
+      name: formatName(data.id),
       value,
       children: [],
     })),
@@ -119,11 +120,26 @@ export function toggleChart(legend: Legend) {
   return isGraph ? 'Tree' : 'Graph'
 }
 
-export function getPkgInfo(name: string): Relation {
-  return (
-    relations[name] ??
-    Object.values(relations).find((val) => val.name?.includes(name))
-  )
+export async function getPkgInfo(name: string): Promise<Relation> {
+  const key = relations[name]
+    ? name
+    : Object.keys(relations).find((item) => item.includes(name))
+
+  const {
+    name: relName,
+    version,
+    dependencies,
+    devDependencies,
+    homepage,
+  } = await request<Relation>(`relations.json/query?name=${key}`)
+
+  return {
+    name: relName,
+    version,
+    homepage,
+    dependencies,
+    devDependencies,
+  }
 }
 
 function resetChart(data: { tree?: Tree; nodes?: Nodes[]; links?: Links[] }) {

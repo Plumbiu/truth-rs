@@ -9,8 +9,8 @@ const pkgInfo = inject<Ref<Relation>>('pkgInfo')!
 const drawer = inject<Ref<boolean>>('drawer')
 const type = ref<ShowType>('info')
 
-function handlePkgInfo() {
-  pkgInfo.value = getPkgInfo(pkgName.value)
+async function handlePkgInfo() {
+  pkgInfo.value = await getPkgInfo(pkgName.value)
 }
 </script>
 
@@ -21,7 +21,7 @@ function handlePkgInfo() {
         <div class="drawer_header">
           <div class="pkgName">
             <ElScrollbar>
-              {{ pkgName }}
+              {{ pkgInfo.name }}
             </ElScrollbar>
           </div>
           <ElDropdown trigger="click" @command="handlePkgInfo">

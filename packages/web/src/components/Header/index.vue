@@ -38,8 +38,8 @@ function debounce(fn: () => void) {
   }
 }
 
-const handleSearch = debounce(() => {
-  pkgInfo.value = getPkgInfo(pkgName.value)
+const handleSearch = debounce(async () => {
+  pkgInfo.value = await getPkgInfo(pkgName.value)
 })
 </script>
 
