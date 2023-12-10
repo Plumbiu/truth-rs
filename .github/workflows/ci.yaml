@@ -64,7 +64,7 @@ jobs:
           git config --global user.email 3434909403@qq.com
           git config --global user.name Plumbiu
           git add .
-          git commit -m "feat: update events.json"
+          git commit -m "build: target"
           git pull --rebase
       - name: Push target
         uses: ad-m/github-push-action@master
