@@ -25,12 +25,12 @@ pub async fn start_server(port: u16, relations: RelationsMap) -> std::io::Result
         let cors = actix_cors::Cors::permissive();
         App::new()
             .wrap(cors)
+            .service(index)
             .app_data(web::Data::new(AppState {
                 relations: relations.clone(),
             }))
             .service(
                 web::scope("/api")
-                    .service(index)
                     .service(relations_json)
                     .service(relations_name_json)
                     .service(graph_json)
