@@ -53,6 +53,7 @@ jobs:
           # Replace with the name of your binary
           binary_name="truth-rs"
           dirname="bin/${{ matrix.target }}"
+          rm -rf /bin
           mkdir "bin"
           mkdir "$dirname"
           if [ "${{ matrix.os }}" = "windows-latest" ]; then
