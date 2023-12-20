@@ -13,7 +13,7 @@ fn insert_relations_one(
     include_dev: bool,
 ) {
     let package_json_path = dir.join("package.json");
-    let mut pkg = fs::read_to_string(package_json_path.clone()).unwrap();
+    let mut pkg = fs::read_to_string(&package_json_path).unwrap();
     let pkg: Package = unsafe { simd_json::serde::from_str(&mut pkg).unwrap() };
     let mut relation = Relation {
         name: pkg.name.to_owned(),
