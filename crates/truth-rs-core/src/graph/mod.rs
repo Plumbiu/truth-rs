@@ -37,5 +37,5 @@ pub fn gen_graph(relations: &RelationsMap, category: Option<u8>) -> Graph {
 }
 
 pub fn stringify_graph(relations: &RelationsMap) -> String {
-    simd_json::to_string(&gen_graph(relations, None)).unwrap()
+    sonic_rs::to_string(&gen_graph(relations, None)).unwrap()
 }

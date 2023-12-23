@@ -14,7 +14,6 @@ truth-rs-core = { path = "crates/truth-rs-core" }
 truth-rs-type = { path = "crates/truth-rs-type" }
 truth-rs-server = { path = "crates/truth-rs-server" }
 truth-rs-constants = { path = "crates/truth-rs-constants" }
-mimalloc = "0.1.39"
 
 [profile.release]
 panic = "abort"

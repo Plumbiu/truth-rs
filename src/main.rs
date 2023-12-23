@@ -1,12 +1,9 @@
 use clap::{Parser, Subcommand};
-use mimalloc::MiMalloc;
 use std::{fs, time::Instant};
 use truth_rs_constants::log_url;
 use truth_rs_core::{json::stringify_json, relation::gen_relations, txt::gen_txt};
 use truth_rs_server::start_server;
 
-#[global_allocator]
-static GLOBAL: MiMalloc = MiMalloc;
 #[derive(Debug, Parser)] // requires `derive` feature
 #[command(name = "truth-rs")]
 #[command(about = "A command-line tool for analyzing dependencies under node_moudles")]

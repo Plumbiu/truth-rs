@@ -71,5 +71,5 @@ pub fn gen_json(depth: u8, relation_map: &RelationsMap) -> Pkgs {
 }
 
 pub fn stringify_json(relations: &RelationsMap, depth: u8) -> String {
-    simd_json::to_string(&gen_json(depth, relations)).unwrap()
+    sonic_rs::to_string(&gen_json(depth, relations)).unwrap()
 }

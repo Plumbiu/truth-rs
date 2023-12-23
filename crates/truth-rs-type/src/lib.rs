@@ -11,9 +11,10 @@ use std::collections::{HashMap, HashSet};
 
 pub type AHashMap = HashMap<String, String, RandomState>;
 pub type AHashSet = HashSet<String, RandomState>;
+
 #[derive(Deserialize)]
 pub struct RelationQuery {
-    pub name: String
+    pub name: String,
 }
 
 #[derive(Deserialize, Serialize, Debug, Clone)]

@@ -1,4 +1,4 @@
-use simd_json;
+use sonic_rs;
 use std::{
     collections::HashMap,
     fs,
@@ -13,8 +13,8 @@ fn insert_relations_one(
     include_dev: bool,
 ) {
     let package_json_path = dir.join("package.json");
-    let mut pkg = fs::read_to_string(&package_json_path).unwrap();
-    let pkg: Package = unsafe { simd_json::serde::from_str(&mut pkg).unwrap() };
+    let pkg = fs::read(&package_json_path).unwrap();
+    let pkg: Package = unsafe { sonic_rs::from_slice_unchecked(&pkg).unwrap() };
     let mut relation = Relation {
         name: pkg.name.to_owned(),
         path: package_json_path.to_string_lossy().to_string(),
@@ -91,5 +91,5 @@ pub fn gen_relations(include_dev: bool) -> RelationsMap {
 }
 
 pub fn stringify_relations(include_dev: bool) -> String {
-    simd_json::to_string(&gen_relations(include_dev)).unwrap()
+    sonic_rs::to_string(&gen_relations(include_dev)).unwrap()
 }

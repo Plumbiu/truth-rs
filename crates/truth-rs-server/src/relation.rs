@@ -1,6 +1,6 @@
 use crate::AppState;
 use actix_web::{get, web, HttpResponse, Responder};
-use simd_json::to_string;
+use sonic_rs::to_string;
 use std::fs;
 use truth_rs_type::RelationQuery;
 
