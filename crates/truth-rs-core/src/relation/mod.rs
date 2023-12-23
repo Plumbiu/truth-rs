@@ -18,7 +18,10 @@ fn insert_relations_one(
     let mut relation = Relation {
         name: pkg.name.to_owned(),
         path: package_json_path.to_string_lossy().to_string(),
-        version: pkg.version,
+        version: match pkg.version {
+            Some(version) => version,
+            None => "latest".to_owned(),
+        },
         dependencies: pkg.dependencies,
         devDependencies: None,
         homepage: pkg.homepage,
