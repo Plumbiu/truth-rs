@@ -8,4 +8,4 @@ edition = "2021"
 [dependencies]
 ahash = "0.8.6"
 truth-rs-type = { path = "../truth-rs-type" }
-sonic-rs = "0.2.6"
+sonic-rs = "0.3.1"

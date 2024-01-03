@@ -12,4 +12,4 @@ actix-web = { version = "4.4.0", default-features = false, features = [
 actix-cors = "0.6.4"
 truth-rs-core = { path = "../truth-rs-core" }
 truth-rs-type = { path = "../truth-rs-type" }
-sonic-rs = "0.2.6"
+sonic-rs = "0.3.1"
